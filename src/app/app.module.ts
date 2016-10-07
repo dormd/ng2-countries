@@ -5,9 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { CountryFlagComponent,
+         CountryOutlineComponent } from './components';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountryFlagComponent,
+    CountryOutlineComponent
   ],
   imports: [
     BrowserModule,
