@@ -8,18 +8,39 @@ import { AppComponent } from './app.component';
 import { CountryFlagComponent,
          CountryOutlineComponent } from './components';
 
-@NgModule({
-  declarations: [
+import { A2ToCountryPipe,
+         A2ToCapitalPipe,
+         A2ToContinentPipe, }      from './pipes';
+
+import { COUNTRIES_DATA } from './models/countries.model'
+
+import { CountriesData } from '../assets/data/countries';
+
+const components = [
     AppComponent,
     CountryFlagComponent,
-    CountryOutlineComponent
+    CountryOutlineComponent,
+];
+
+const pipes = [
+  A2ToCapitalPipe,
+  A2ToContinentPipe,
+  A2ToCountryPipe
+];
+
+@NgModule({
+  declarations: [
+    ...components,
+    ...pipes
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    { provide: COUNTRIES_DATA, useValue: CountriesData }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
