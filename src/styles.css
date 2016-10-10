@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/flag-icon-css/css/flag-icon.min.css';
+
+body {
+    background: #374046;
+}
+
+h1 {
+    color: white;    
+}
