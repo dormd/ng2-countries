@@ -14,6 +14,32 @@ export class A2ToCountryPipe implements PipeTransform {
         if (!country)
             return '';
 
-        return country.name.common || '';
+        if (!args || args.length === 0 || args[0] === 'common')
+            return country.name.common || '';
+
+        const nameType = args[0];
+        if (nameType === 'official')
+            return country.name.official;
+        
+        if (args.length === 1) {
+            if (nameType === 'native') {
+                // first native language common country name
+                const values = _.values(country.name.native);
+                if (values.length > 0)
+                    return values[0].common;
+            }
+            return '';            
+        }
+
+        const nativeNameKey = args[1];
+        const nativeNameObj = country.name.native[nativeNameKey];
+        if (!nativeNameObj)
+            return '';
+
+        if (args.length === 2)
+            return nativeNameObj.common;
+
+        const nativeNameKeyType = args[2];
+        return nativeNameObj[nativeNameKeyType] || '';
     } 
 } 
