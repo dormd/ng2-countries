@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
@@ -15,6 +16,13 @@ import { A2ToCountryPipe,
 import { COUNTRIES_DATA } from './models/countries.model'
 
 import { CountriesData } from '../assets/data/countries';
+
+const modules = [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    MaterialModule.forRoot()
+];
 
 const components = [
     AppComponent,
@@ -34,9 +42,7 @@ const pipes = [
     ...pipes
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
+    ...modules
   ],
   providers: [
     { provide: COUNTRIES_DATA, useValue: CountriesData }
