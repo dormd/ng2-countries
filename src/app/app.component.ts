@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { COUNTRIES_DATA, Countries } from './models/countries.model';
+
+import * as _ from "lodash";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  private _countriesKeys: string[];
+
+  constructor(@Inject(COUNTRIES_DATA) private _countriesData: Countries) {
+    this._countriesKeys = _.keys(this._countriesData);
+  }
 }

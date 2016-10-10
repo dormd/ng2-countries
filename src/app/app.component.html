@@ -1,9 +1,25 @@
-<h1>
-  {{title}}
+<header>
+    <h1>Ng Countries</h1>
+</header>
 
-  AW
-  Name: {{ 'AW' | a2ToCountry }}
-  Capital: {{ 'AW' | a2ToCapital }}
-  Continent: {{ 'AW' | a2ToContinent }}
-  
-</h1>
+<md-card class='country-summary' *ngFor='let a2Country of _countriesKeys'>
+   <div class='flag-container'>
+      <app-country-flag [alpha2]='a2Country'></app-country-flag>
+   </div>
+   
+   <md-card-subtitle [innerHtml]='a2Country'></md-card-subtitle>
+   
+   <md-card-title [innerHtml]='a2Country | a2ToCountry'></md-card-title>
+
+   <md-card-subtitle>{{ a2Country | a2ToCountry : ['native'] }}</md-card-subtitle>      
+   
+   <md-card-content>
+      <p>
+        <span>Capital: </span>{{ a2Country | a2ToCapital }}
+      </p>
+
+      <p>
+        <span>Continent: </span>{{ a2Country | a2ToContinent }}
+      </p>
+   </md-card-content>
+</md-card>

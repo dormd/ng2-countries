@@ -1,0 +1,25 @@
+header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    background-color: #039BE5;
+}
+
+.country-summary {
+    display: inline-block;
+    width: 250px;
+    height: 170px;
+    overflow: overlay;
+
+    background-color: #e4e4e4;
+    margin: 0 10px 10px 0;
+    border: 1px solid gray;
+}
+
+.flag-container {
+    float: right;
+    margin-bottom: 5px;
+}
+
+app-country-flag >>> span {
+    width: 85px;
+    line-height: 63px;
+}
