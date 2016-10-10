@@ -15732,13 +15732,13 @@ export const CountriesData: Countries = {
             "common": "Israel",
             "official": "State of Israel",
             "native": {
-                "ara": {
-                    "official": "دولة إسرائيل",
-                    "common": "إسرائيل"
-                },
                 "heb": {
                     "official": "מדינת ישראל",
                     "common": "ישראל"
+                },
+                "ara": {
+                    "official": "دولة إسرائيل",
+                    "common": "إسرائيل"
                 }
             }
         },
