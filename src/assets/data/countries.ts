@@ -11504,6 +11504,7 @@ export const CountriesData: Countries = {
     },
     "GE": {
         "name": {
+            "wiki": "Georgia (country)",        
             "common": "Georgia",
             "official": "Georgia",
             "native": {

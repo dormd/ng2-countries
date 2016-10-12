@@ -15,6 +15,7 @@ interface IStringToOfficialCommon {
 
 export interface ICountry {
     name: {
+        wiki?: string,
         common: string,
         official: string,
         native: IStringToOfficialCommon
