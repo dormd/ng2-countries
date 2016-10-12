@@ -1,27 +1,32 @@
-import { Component, Input, OnInit }   from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter }   from '@angular/core';
 
 @Component({
     selector: 'app-country-flag',
     templateUrl: './country-flag.component.html',
-    // styleUrls: [ './country-flag.component.less' ],	
+    styleUrls: [ './country-flag.component.css' ],	
 })
 
 export class CountryFlagComponent implements OnInit {
     @Input() alpha2: string;
-    @Input() isSquared: boolean = false;
+    @Input() height: number = 30;
+    @Input() width: number = 30;
 
-    private _classes: Object;
+    @Output() flagClick = new EventEmitter();
+ 
+    private _classes: { [key: string]: boolean };
 
     public constructor() { }
 
     public ngOnInit() {
-        const countryIconClass = `flag-icon-${this.alpha2.toLowerCase()}`;
+        const countryIconClass = `flag-icon-${ this.alpha2.toLowerCase() }`;
 
         this._classes = {
             'flag-icon': true,
-            'flag-icon-squared': this.isSquared
+            [countryIconClass]: true
         };
+    }
 
-        this._classes[countryIconClass] = 'true';
+    private _onClick() {
+        this.flagClick.emit(this.alpha2);
     }
 }
