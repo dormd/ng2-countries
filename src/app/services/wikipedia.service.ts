@@ -8,14 +8,8 @@ export class WikipediaService {
 
   constructor(private _jsonp: Jsonp) {}
 
-  public getAnthemByCountry(countrySearchToken: string) {
-    // const headers = new Headers();
-    // headers.append("Origin", "http://localhost:4002");
-    // headers.append("Content-Type", "application/json; charset=UTF-8");
-
-    // let wikiUrl = this._getQueryUrl(countrySearchToken);
-    debugger
-    
+  // unused function
+  public fetchAnthemByCountry(countrySearchToken: string) {
     let params = new URLSearchParams();
     params.set('titles', countrySearchToken); // the user's search value
     params.set('action', 'query');
@@ -25,11 +19,6 @@ export class WikipediaService {
     params.set('callback', 'JSONP_CALLBACK');
     params.set('redirects', null);
     
-    // params.set('search', countrySearchToken); // the user's search value
-    // params.set('action', 'opensearch');
-    // params.set('format', 'json');
-    // params.set('callback', 'JSONP_CALLBACK');
-
     return this._jsonp
                .get(this._baseUrl, { search: params })
                .map(response => response.json().query.pages)
@@ -55,22 +44,5 @@ export class WikipediaService {
                    return filePathWithSpaces.split(' ').join('_');
                })
                .do(anthemPath => console.log(anthemPath));
-    
-    // TODO: Add error handling
-    // this._http
-    //     .options(wikiUrl, { headers }).subscribe(() => {
-    //         this._http
-    //             .get(wikiUrl, {
-    //                 // headers: headers
-    //             })
-    //             .subscribe((res) => {
-    //                 console.log(res);
-    //             });
-    //                 //    .map(response => <string[]> response.json()[1]);
-    //     });
-  }
-
-  private _getQueryUrl(query: string) {
-      return `${this._baseUrl}?action=query&titles=${query}&prop=revisions&rvprop=content&format=json`;
   }
 }
