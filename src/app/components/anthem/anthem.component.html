@@ -1,0 +1,13 @@
+<input *ngIf='_isShowButtonShow' 
+        type='button' 
+        (click)='_isShowButtonShow = false' 
+        value='Load anthem'>
+
+<iframe *ngIf='!_isShowButtonShow'
+        [src]='alpha2 | a2ToAnthem | safe' 
+        (load)='_onLoad()' 
+        [name]='alpha2' 
+        width='125' 
+        [height]='_height'
+        frameborder='0'>
+</iframe>
