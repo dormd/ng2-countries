@@ -25,7 +25,7 @@ export interface ICountry {
     iso_3166_1_alpha2: string,
     iso_3166_1_alpha3: string,
     iso_3166_1_numeric: string,
-    currency: null[] | {
+    currency: any[] | {
         [key: string]: {
             iso_4217_code: string,
             iso_4217_numeric: number | string,
@@ -35,8 +35,8 @@ export interface ICountry {
     },
     tld: string[],
     alt_spellings: string[],
-    languages: IStringToString | null[],
-    translations: IStringToOfficialCommon | null[],
+    languages: IStringToString | any[],
+    translations: IStringToOfficialCommon | any[],
     geo: {
         continent: IStringToString,
         postal_code: boolean,
@@ -63,31 +63,31 @@ export interface ICountry {
         national_prefix: string,
         national_number_lengths: number[],
         national_destination_code_lengths: number[],
-        international_prefix: string | 0,
+        international_prefix: string | number
     },
     extra: {
         geonameid: number,
-        edgar: string | 0,
-        itu: string | 0,
-        marc: string | 0,
-        wmo: string | 0,
-        ds: string | 0,
-        fifa: string | 0,
-        fips: string | 0,
+        edgar: string | number,
+        itu: string | number,
+        marc: string | number,
+        wmo: string | number,
+        ds: string | number,
+        fifa: string | number,
+        fips: string | number,
         gaul: number,
-        ioc: string | 0,
-        cowc: string | 0,
+        ioc: string | number,
+        cowc: string | number,
         cown: number,
         fao: number,
         imf: number,
-        ar5: string | 0,
+        ar5: string | number,
         address_format: string,
         eu_member: boolean,
         vat_rates: {
             standard: number,
             reduced: number[],
-            super_reduced: number | null,
-            parking: number | null
+            super_reduced: number,
+            parking: number
         }
     }
 }
