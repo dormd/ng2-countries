@@ -1,0 +1,9 @@
+<span *ngIf='a2Countries.length === 0'>There are no border countries</span>
+
+<app-country-flag 
+    *ngFor='let a2 of a2Countries' 
+    [alpha2]='a2' 
+    [height]='flagHeight'
+    [width]='flagWidth'
+    (flagClick)='_onFlagClick($event)'>
+</app-country-flag>
