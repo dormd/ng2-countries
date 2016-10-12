@@ -1,9 +1,9 @@
-<input *ngIf='_isShowButtonShow' 
+<input *ngIf='!_isShow' 
         type='button' 
-        (click)='_isShowButtonShow = false' 
+        (click)='_isShow = true' 
         value='Load anthem'>
 
-<iframe *ngIf='!_isShowButtonShow'
+<iframe *ngIf='_isShow'
         [src]='alpha2 | a2ToAnthem | safe' 
         (load)='_onLoad()' 
         [name]='alpha2' 

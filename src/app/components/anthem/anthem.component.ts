@@ -1,8 +1,4 @@
-import { Component, 
-         Input, 
-         ViewChild,
-         ElementRef, 
-         Renderer }   from '@angular/core';
+import { Component, Input }   from '@angular/core';
 
 @Component({
     selector: 'app-anthem',
@@ -13,7 +9,7 @@ import { Component,
 export class AnthemComponent {
     @Input() alpha2: string;
 
-    private _isShowButtonShow = true;
+    private _isShow = false;
     private _height = 1;
 
     public constructor() { }
