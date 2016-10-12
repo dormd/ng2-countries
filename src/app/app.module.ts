@@ -1,26 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule,
+         JsonpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 
 import { CountryFlagComponent,
-         CountryOutlineComponent } from './components';
+         CountryOutlineComponent,
+         AnthemComponent }  from './components';
 
 import { A2ToCountryPipe,
          A2ToCapitalPipe,
-         A2ToContinentPipe, }      from './pipes';
+         A2ToContinentPipe,
+         A2ToAnthemPipe,
+         SafePipe, }        from './pipes';
 
-import { COUNTRIES_DATA } from './models/countries.model'
+import { WikipediaService } from './services';
 
-import { CountriesData } from '../assets/data/countries';
+import { COUNTRIES_DATA,
+         ANTHEMS_DATA }     from './models';
+
+import { CountriesData,
+         AnthemsData }      from '../assets/data';
 
 const modules = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    JsonpModule,
     MaterialModule.forRoot()
 ];
 
@@ -28,13 +37,22 @@ const components = [
     AppComponent,
     CountryFlagComponent,
     CountryOutlineComponent,
+    AnthemComponent
 ];
 
 const pipes = [
-  A2ToCapitalPipe,
-  A2ToContinentPipe,
-  A2ToCountryPipe
+    A2ToCapitalPipe,
+    A2ToContinentPipe,
+    A2ToCountryPipe,
+    A2ToAnthemPipe,
+    SafePipe
 ];
+
+const providers = [
+    { provide: COUNTRIES_DATA, useValue: CountriesData },
+    { provide: ANTHEMS_DATA, useValue: AnthemsData },
+    WikipediaService
+]
 
 @NgModule({
   declarations: [
@@ -45,7 +63,7 @@ const pipes = [
     ...modules
   ],
   providers: [
-    { provide: COUNTRIES_DATA, useValue: CountriesData }
+    ...providers
   ],
   bootstrap: [AppComponent]
 })
