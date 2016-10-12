@@ -14,9 +14,9 @@ header h1 {
 
 .country-summary {
     display: inline-block;
+    position: relative;
     width: 250px;
-    height: 200px;
-    overflow: overlay;
+    height: 235px;
 
     background-color: #e4e4e4;
     margin: 0 10px 10px 0;
@@ -28,7 +28,7 @@ header h1 {
     margin-bottom: 5px;
 }
 
-app-country-flag >>> span {
-    width: 85px;
-    line-height: 63px;
+app-country-borders {
+    display: block;
+    position: absolute;
 }

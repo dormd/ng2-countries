@@ -9,12 +9,15 @@ import { AppComponent } from './app.component';
 
 import { CountryFlagComponent,
          CountryOutlineComponent,
+         CountryBordersComponent,
+         CountriesBarComponent,
          AnthemComponent }  from './components';
 
 import { A2ToCountryPipe,
          A2ToCapitalPipe,
          A2ToContinentPipe,
          A2ToAnthemPipe,
+         A3ToA2Pipe,
          SafePipe, }        from './pipes';
 
 import { WikipediaService } from './services';
@@ -37,6 +40,8 @@ const components = [
     AppComponent,
     CountryFlagComponent,
     CountryOutlineComponent,
+    CountryBordersComponent,
+    CountriesBarComponent,
     AnthemComponent
 ];
 
@@ -45,6 +50,7 @@ const pipes = [
     A2ToContinentPipe,
     A2ToCountryPipe,
     A2ToAnthemPipe,
+    A3ToA2Pipe,
     SafePipe
 ];
 

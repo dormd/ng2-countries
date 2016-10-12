@@ -3,17 +3,16 @@
 </header>
 
 <main class='main-content-container'>
-  <md-card class='country-summary' *ngFor='let a2Country of _countriesKeys'>
+  <md-card id='{{a2Country}}-summary' class='country-summary' *ngFor='let a2Country of _countriesKeys'>
     <div class='flag-container'>
-        <app-country-flag [alpha2]='a2Country'></app-country-flag>
+        <app-country-flag [alpha2]='a2Country' [height]='63' [width]='85'></app-country-flag>
     </div>
     
     <md-card-subtitle [innerHtml]='a2Country'></md-card-subtitle>
-    
     <md-card-title [innerHtml]='a2Country | a2ToCountry'></md-card-title>
 
     <md-card-subtitle>{{ a2Country | a2ToCountry : ['native'] }}</md-card-subtitle>      
-    
+
     <md-card-content>
         <p>
             <span>Capital: </span>{{ a2Country | a2ToCapital }}
@@ -23,9 +22,9 @@
             <span>Continent: </span>{{ a2Country | a2ToContinent }}
         </p>
 
-        <div *ngIf='_anthemsData[a2Country]'>
-            <app-anthem [alpha2]='a2Country'></app-anthem>
-        </div>
+        <app-anthem *ngIf='_anthemsData[a2Country]' [alpha2]='a2Country'></app-anthem>
+
+        <app-country-borders [alpha2]='a2Country'></app-country-borders>        
     </md-card-content>
 
   </md-card>
