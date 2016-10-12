@@ -1,0 +1,10 @@
+:host:hover {
+    z-index: 1;
+}
+
+.bar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    background-color: rgba(3, 155, 229, 0.85);
+    border-radius: 10px;
+    max-width: 250px;
+}
