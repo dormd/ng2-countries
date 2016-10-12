@@ -3,10 +3,19 @@ header {
     background-color: #039BE5;
 }
 
+header h1 {
+    color: white; 
+    padding: 15px 0 15px 15px;   
+}
+
+.main-content-container {
+    padding: 15px;
+}
+
 .country-summary {
     display: inline-block;
     width: 250px;
-    height: 170px;
+    height: 200px;
     overflow: overlay;
 
     background-color: #e4e4e4;
