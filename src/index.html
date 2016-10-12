@@ -1,14 +1,42 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Ng2Countries</title>
-  <base href="/">
+    <head>
+        <meta charset="utf-8">
+        <title>Ng2Countries</title>
+        <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root>Loading...</app-root>
-</body>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <app-root>Loading...</app-root>
+
+        <!-- BAD PRACTICE: NEED TO BE REMOVED -->
+        <script>
+            (function($) {
+                $.fn.goTo = function() {
+                    var card = $(this);
+                    var currentCardColor = card.css('background-color');                  
+                    
+                    $('html, body').animate({
+                        scrollTop: $(this).offset().top + 'px'
+                    }, 1250, function() {
+                        card.animate({
+                            backgroundColor: '#e2a8a8'
+                        }, 800, function() {
+                          card.animate({
+                              backgroundColor: currentCardColor
+                          }, 800);
+                        });
+                    });
+                    return this;
+                }
+            })(jQuery); 
+        </script>
+
+    </body>
 </html>
