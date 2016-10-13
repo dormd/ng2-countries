@@ -13,7 +13,7 @@ header h1 {
 }
 
 .country-summary {
-    display: inline-block;
+    display: inline-table;
     position: relative;
     width: 250px;
     height: 235px;
@@ -28,7 +28,12 @@ header h1 {
     margin-bottom: 5px;
 }
 
+.flag-container app-country-flag >>> span {
+    cursor: auto;
+}
+
 app-country-borders {
     display: block;
     position: absolute;
+    margin-top: 16px;
 }
