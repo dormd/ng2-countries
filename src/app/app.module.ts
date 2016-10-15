@@ -31,12 +31,12 @@ const modules = [
 ];
 
 const components = [
-    AppComponent,
     CountryFlagComponent,
     CountryOutlineComponent,
     CountryBordersComponent,
     CountriesBarComponent,
-    AnthemComponent
+    AnthemComponent,
+    AppComponent
 ];
 
 const directives = [
