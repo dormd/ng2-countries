@@ -1,15 +1,15 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewChild } from '@angular/core';
+
+import { SpeakerService }    from './modules/speaker/services';
 
 import { COUNTRIES_DATA, 
-         ANTHEMS_DATA,
-         Countries,
+         Countries }         from './modules/shared/models';
+
+import { ANTHEMS_DATA,
          Anthems }           from './models';
 
+import { ShuffleDirective }  from './directives';
 import { WikipediaService }  from './services';
-
-// import * as wikipedia from 'wikipedia-js/lib/wikiClient.js';
-
-import * as _ from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -20,9 +20,12 @@ export class AppComponent {
   private _countriesKeys: string[];
   private _anthems: Object = {};
 
+  @ViewChild(ShuffleDirective) _shuffleDirective: ShuffleDirective;
+
   constructor(private _wikipediaService: WikipediaService,
-              @Inject(COUNTRIES_DATA) private _countriesData: Countries,
-              @Inject(ANTHEMS_DATA) private _anthemsData: Anthems) {
+              private _speakerService: SpeakerService,
+              @Inject(COUNTRIES_DATA) private _countriesData: Countries) {
+                
     this._countriesKeys = _.keys(this._countriesData);
 
     // for fetching all wikimedia anthems by common country name
@@ -33,6 +36,10 @@ export class AppComponent {
     //       console.log(this._anthems);
     //     });
     // });
+  }
+
+  private _onShuffleClick() {
+      this._shuffleDirective.toggle();
   }
 
   // private _getAnthemWikiLink(commonCountryName: string) {
