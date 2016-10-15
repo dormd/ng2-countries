@@ -1,4 +1,4 @@
-import { Countries } from '../../app/models/countries.model';
+import { Countries } from '../../app/modules/shared/models/countries.model';
 
 export const CountriesData: Countries = {
     "AW": {
@@ -143,12 +143,12 @@ export const CountriesData: Countries = {
             "common": "Afghanistan",
             "official": "Islamic Republic of Afghanistan",
             "native": {
-                "prs": {
-                    "official": "جمهوری اسلامی افغانستان",
-                    "common": "افغانستان"
-                },
                 "pus": {
                     "official": "د افغانستان اسلامي جمهوریت",
+                    "common": "افغانستان"
+                },
+                "prs": {
+                    "official": "جمهوری اسلامی افغانستان",
                     "common": "افغانستان"
                 },
                 "tuk": {
@@ -4300,6 +4300,10 @@ export const CountriesData: Countries = {
             "common": "Bolivia",
             "official": "Plurinational State of Bolivia",
             "native": {
+                "spa": {
+                    "official": "Estado Plurinacional de Bolivia",
+                    "common": "Bolivia"
+                },
                 "aym": {
                     "official": "Wuliwya Suyu",
                     "common": "Wuliwya"
@@ -4311,10 +4315,6 @@ export const CountriesData: Countries = {
                 "que": {
                     "official": "Buliwya Mamallaqta",
                     "common": "Buliwya"
-                },
-                "spa": {
-                    "official": "Estado Plurinacional de Bolivia",
-                    "common": "Bolivia"
                 }
             }
         },
@@ -9747,13 +9747,13 @@ export const CountriesData: Countries = {
             "common": "Western Sahara",
             "official": "Sahrawi Arab Democratic Republic",
             "native": {
-                "ber": {
-                    "official": "Sahrawi Arab Democratic Republic",
-                    "common": "Western Sahara"
-                },
                 "mey": {
                     "official": "الجمهورية العربية الصحراوية الديمقراطية",
                     "common": "الصحراء الغربية"
+                },
+                "ber": {
+                    "official": "Sahrawi Arab Democratic Republic",
+                    "common": "Western Sahara"
                 },
                 "spa": {
                     "official": "República Árabe Saharaui Democrática",
@@ -13445,13 +13445,13 @@ export const CountriesData: Countries = {
             "common": "Guam",
             "official": "Guam",
             "native": {
-                "cha": {
-                    "official": "Guåhån",
-                    "common": "Guåhån"
-                },
                 "eng": {
                     "official": "Guam",
                     "common": "Guam"
+                },
+                "cha": {
+                    "official": "Guåhån",
+                    "common": "Guåhån"
                 },
                 "spa": {
                     "official": "Guam",
