@@ -84,7 +84,10 @@ export const LanguagesData: Languages = {
 		}
 	},
 	"hye": {
-		"full": "Armenian"
+		"full": "Armenian",
+		"speak": {
+			"isExist": false
+		}
 	},
 	"asm": {
 		"full": "Assamese"
@@ -402,7 +405,10 @@ export const LanguagesData: Languages = {
 		"full": "Flemish; Dutch"
 	},
 	"nld": {
-		"full": "Flemish; Dutch"
+		"full": "Flemish; Dutch",
+		"speak": {
+			"isExist": false
+		}
 	},
 	"dum": {
 		"full": "Dutch"
