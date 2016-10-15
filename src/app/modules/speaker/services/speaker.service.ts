@@ -6,7 +6,6 @@ import { COUNTRIES_DATA,
          Countries,
          Languages }         from '../../shared/models';
 
-import * as _ from 'lodash';
 declare var responsiveVoice;
 
 @Injectable()
@@ -23,8 +22,16 @@ export class SpeakerService {
             responsiveVoice.speak(text, languageGender)
     }
 
-    private _getLanguageAndGender(sourceLanguage: string, gender: string): string {
-        let languageData = this._languagesData[sourceLanguage];
+    public isSpeakerExist(iso3Language: string): boolean {
+        const languageData = this._languagesData[iso3Language];
+        return languageData && (!languageData.speak || languageData.speak.isExist !== false);
+    }
+
+    private _getLanguageAndGender(iso3Language: string, gender: string): string {
+        const languageData = this._languagesData[iso3Language];
+        if (!languageData)
+            return null;
+
         let actualGender = gender;
         const languageSpeakData = languageData.speak;
 

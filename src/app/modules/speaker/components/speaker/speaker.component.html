@@ -1,2 +1,5 @@
 {{ text }}
-<input type='button' (click)='_speak()' value='🔊' />
+<input *ngIf='_isSpeakerExist'
+       type='button' 
+       (click)='_speak()' 
+       value='🔊' />

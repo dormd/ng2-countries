@@ -1,20 +1,26 @@
-import { Component, Input }   from '@angular/core';
+import { Component, Input, OnChanges }   from '@angular/core';
 import { SpeakerService }     from '../../services';
 
 @Component({
     selector: 'speaker',
     templateUrl: './speaker.component.html',
-    // styleUrls: [ './speaker.component.css' ],	
+    styleUrls: [ './speaker.component.css' ],	
 })
 
-export class SpeakerComponent {
-    @Input() text: string;
-    @Input() language = 'US English';
+export class SpeakerComponent implements OnChanges {
+    @Input() text: string; 
+    @Input() language = 'eng';
     @Input() gender = 'Female';
+
+    private _isSpeakerExist = false;
 
     constructor(private _speakerService: SpeakerService) {}
 
-    public speak() {
+    public ngOnChanges() {
+        this._isSpeakerExist = this._speakerService.isSpeakerExist(this.language);
+    }
+
+    private _speak() {
         this._speakerService.speak(this.text, this.language, this.gender);
     }
 }
