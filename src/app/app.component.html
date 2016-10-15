@@ -15,11 +15,11 @@
         <md-card-subtitle [innerHtml]='a2Country'></md-card-subtitle>
 
         <md-card-title>
-            <speaker [text]='a2Country | a2ToCountry' [gender]='gender'></speaker>
+            <speaker [text]='a2Country | a2ToCountry' [gender]='_gender'></speaker>
         </md-card-title>
 
         <md-card-subtitle>
-            <country-native-name-speaker [alpha2]='a2Country' [gender]='gender'></country-native-name-speaker>      
+            <country-native-name-speaker [alpha2]='a2Country' [gender]='_gender'></country-native-name-speaker>      
         </md-card-subtitle>
 
         <md-card-content>
