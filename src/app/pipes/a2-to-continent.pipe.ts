@@ -2,7 +2,7 @@ import { Inject, Pipe, PipeTransform } from '@angular/core';
 
 import * as _ from "lodash";
 
-import { COUNTRIES_DATA, Countries, ICountry } from '../models/countries.model';
+import { COUNTRIES_DATA, Countries, ICountry } from '../modules/shared/models/countries.model';
 
 @Pipe({
     name: 'a2ToContinent'

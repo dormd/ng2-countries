@@ -1,17 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule,
-         JsonpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
-import { AppComponent } from './app.component';
+import { SharedModule,
+         SpeakerModule }    from './modules';
 
+import { AppComponent } from './app.component';
 import { CountryFlagComponent,
          CountryOutlineComponent,
          CountryBordersComponent,
          CountriesBarComponent,
          AnthemComponent }  from './components';
+
+import { ShuffleDirective } from './directives'
 
 import { A2ToCountryPipe,
          A2ToCapitalPipe,
@@ -21,18 +21,12 @@ import { A2ToCountryPipe,
          SafePipe, }        from './pipes';
 
 import { WikipediaService } from './services';
-
-import { COUNTRIES_DATA,
-         ANTHEMS_DATA }     from './models';
-
-import { CountriesData,
-         AnthemsData }      from '../assets/data';
+import { ANTHEMS_DATA }     from './models';
+import { AnthemsData }      from '../assets/data';
 
 const modules = [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    JsonpModule,
+    SharedModule,
+    SpeakerModule,
     MaterialModule.forRoot()
 ];
 
@@ -45,6 +39,10 @@ const components = [
     AnthemComponent
 ];
 
+const directives = [
+    ShuffleDirective
+];
+
 const pipes = [
     A2ToCapitalPipe,
     A2ToContinentPipe,
@@ -55,7 +53,6 @@ const pipes = [
 ];
 
 const providers = [
-    { provide: COUNTRIES_DATA, useValue: CountriesData },
     { provide: ANTHEMS_DATA, useValue: AnthemsData },
     WikipediaService
 ]
@@ -63,6 +60,7 @@ const providers = [
 @NgModule({
   declarations: [
     ...components,
+    ...directives,
     ...pipes
   ],
   imports: [
@@ -71,6 +69,6 @@ const providers = [
   providers: [
     ...providers
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
