@@ -3,7 +3,7 @@ import { SpeakerService,
          CountryNativeNameService } from '../../services';
 
 @Component({
-    selector: 'countr-native-name-speaker',
+    selector: 'country-native-name-speaker',
     templateUrl: './country-native-name-speaker.component.html'
 })
 
