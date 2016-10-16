@@ -1,4 +1,4 @@
-<span *ngIf='a2Countries.length === 0'>There are no border countries</span>
+<div *ngIf='a2Countries.length === 0' class='no-countries-message'>There are no countries</div>
 
 <app-country-flag 
     *ngFor='let a2 of a2Countries' 

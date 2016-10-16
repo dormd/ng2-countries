@@ -7,3 +7,7 @@ app-country-flag >>> span {
     border-radius: 22px;
     margin: 5px;
 } 
+
+.no-countries-message {
+    padding: 15px;
+}
