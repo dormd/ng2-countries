@@ -1,5 +1,6 @@
 import { Directive, Input, ElementRef, Renderer } from '@angular/core';
 import { AnimationStyles, AnimationKeyframe } from '../models';
+import { AnimationsService } from '../services';
 
 @Directive({
     selector: '[shuffle]'
@@ -10,7 +11,8 @@ export class ShuffleDirective {
     private _availableIndexesToShuffle: number[];
 
     constructor(private _elementRef: ElementRef,
-                private _renderer: Renderer) { }
+                private _renderer: Renderer,
+                private _animationsService: AnimationsService) { }
 
     public toggle(): void {
         this._isShuffleOn ? this._stop() : this._start();
@@ -62,14 +64,14 @@ export class ShuffleDirective {
     private _doShuffleAnimation(node1: Node, node2: Node, futureNode2NextSibling: Node, callback: Function): void {
         const nativeEl = this._elementRef.nativeElement;        
 
-        this._fadeOutNode(node1, () => {
+        this._animationsService.fadeOut(node1, this._renderer, () => {
             // move node1 instead of node2
             this._renderer.invokeElementMethod(nativeEl, 'replaceChild', [ node1, node2 ]);
 
-            this._fadeInNode(node1);
+            this._animationsService.fadeIn(node1, this._renderer);
         });
 
-        this._fadeOutNode(node2, () => {
+        this._animationsService.fadeOut(node2, this._renderer, () => {
             // when there is next sibling - insert the child before next sibling
             // otherwise append the child to the end of the list
             if (futureNode2NextSibling)
@@ -77,42 +79,10 @@ export class ShuffleDirective {
             else
                 this._renderer.invokeElementMethod(nativeEl, 'appendChild', [ node2 ]);
 
-            this._fadeInNode(node2, callback);
+            this._animationsService.fadeIn(node2, this._renderer, callback);
         });
     }
 
-    private _fadeInNode = (node: Node, callback?: Function): void => {
-        this._renderer.invokeElementMethod(
-            node, 
-            'animate', 
-            [
-                [
-                    {opacity: '0'},
-                    {opacity: '1'}
-                ], 
-                this._fadeStepMilliseconds
-            ]
-        );
-
-        if (callback)
-            setTimeout(callback, this._fadeStepMilliseconds + 3000)        
-    }
-
-    private _fadeOutNode = (node: Node, callback: Function): void => {
-        this._renderer.invokeElementMethod(
-            node, 
-            'animate', 
-            [
-                [
-                    {opacity: '1'},
-                    {opacity: '0'}
-                ], 
-                this._fadeStepMilliseconds,
-            ]
-        );
-
-        setTimeout(callback, this._fadeStepMilliseconds)
-    }
 
     private _removeAvailableIndexes(index1: number, index2: number): void {
         _.pull(this._availableIndexesToShuffle, index1, index2);

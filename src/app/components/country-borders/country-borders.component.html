@@ -1,8 +1,7 @@
-<a *ngIf='!_isShow' (mouseover)='_isShow = true'>Border Countries</a>
+<a [hidden]='_isShow || _isAnimationTime' (mouseover)='_show()'>Border Countries</a>
 
-<div class='bar'>
+<div class='bar' [hidden]='!_isShow'>
     <app-countries-bar 
-        *ngIf='_isShow'
         [a2Countries]='_a3CountryBorders | a3ToA2' 
         [flagHeight]='_flagHeight'
         [flagWidth]='_flagWidth'
