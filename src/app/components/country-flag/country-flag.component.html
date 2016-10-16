@@ -1,6 +1,8 @@
 <span [ngClass]='_classes' 
+      (mouseenter)='_onOver($event)'
       (click)='_onClick()'
       style.line-height='{{height}}px'
+      style.height='{{height}}px'      
       style.width='{{width}}px'
       [title]='alpha2 | a2ToCountry'>
 </span>

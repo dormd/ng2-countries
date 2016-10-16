@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, Output, EventEmitter }   from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, ElementRef, Renderer }   from '@angular/core';
+import { AnimationsService } from '../../services/animations.service';
 
 @Component({
     selector: 'app-country-flag',
@@ -15,7 +16,9 @@ export class CountryFlagComponent implements OnInit {
  
     private _classes: { [key: string]: boolean };
 
-    public constructor() { }
+    constructor(private _elementRef: ElementRef,
+                private _renderer: Renderer,
+                private _animationsService: AnimationsService) { }
 
     public ngOnInit() {
         const countryIconClass = `flag-icon-${ this.alpha2.toLowerCase() }`;
@@ -24,6 +27,10 @@ export class CountryFlagComponent implements OnInit {
             'flag-icon': true,
             [countryIconClass]: true
         };
+    }
+
+    private _onOver(event) {
+        this._animationsService.makeBigger(event.target, this._renderer);
     }
 
     private _onClick() {
