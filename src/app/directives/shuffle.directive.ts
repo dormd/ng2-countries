@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, Renderer } from '@angular/core';
+import { Directive, Output, ElementRef, Renderer, EventEmitter } from '@angular/core';
 import { AnimationStyles, AnimationKeyframe } from '../models';
 import { AnimationsService } from '../services';
 
@@ -6,9 +6,12 @@ import { AnimationsService } from '../services';
     selector: '[shuffle]'
 })
 export class ShuffleDirective {
+    @Output() shuffleCount = new EventEmitter();
+
     private _isShuffleOn = false;
     private _fadeStepMilliseconds = 1500;
     private _availableIndexesToShuffle: number[];
+    private _count = 0;
 
     constructor(private _elementRef: ElementRef,
                 private _renderer: Renderer,
@@ -19,6 +22,7 @@ export class ShuffleDirective {
     }
 
     private _start(): void {
+        this._count = 0;
         this._isShuffleOn = true;
         this._buildAvailableIndexes();
         this._doShufflingFlow();
@@ -31,15 +35,19 @@ export class ShuffleDirective {
 
     private _stop(): void {
         this._isShuffleOn = false;
+        this._count = 0;        
     }
 
     private _doShufflingFlow = (): void => {
         if (!this._isShuffleOn)
-            return;
+            return; 
 
         const child1Index = this._getRandomChildIndex();
         const child2Index = this._getRandomChildIndex();
         this._shuffleChilds(child1Index, child2Index);
+
+        this._count++;
+        this.shuffleCount.emit(this._count);
         
         setTimeout(this._doShufflingFlow, 50);
     }

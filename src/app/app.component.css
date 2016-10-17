@@ -4,6 +4,7 @@ header {
 }
 
 header h1 {
+    display: inline-block;
     color: white; 
     padding: 15px 0 15px 15px;   
 }
@@ -19,8 +20,16 @@ header h1 {
     height: 235px;
 
     background-color: #e4e4e4;
+    padding: 20px;
     margin: 0 10px 10px 0;
     border: 1px solid gray;
+}
+
+.shrink-mode {
+    margin: 0;    
+    padding: 5px;
+    width: 50px;
+    height: 50px;
 }
 
 .flag-container {
@@ -36,4 +45,28 @@ app-country-borders {
     display: block;
     position: absolute;
     margin-top: 16px;
+}
+
+.shuffle-on {
+    color: orangered;
+}
+
+.shuffle-button-container {
+    position: absolute;
+    right: 35px;
+    top: 16px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+.shuffle-count {
+    position: absolute;
+    left: 28px;
+    top: -11px;
+    font-size: .5em;
+    padding: 2px;
+    border-radius: 6px;
+    color: white;
+    background-color: rgba(40, 40, 191, 0.72)
 }

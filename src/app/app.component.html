@@ -1,39 +1,45 @@
 <header>
     <h1>Ng2 Countries | By dormd</h1>
-    <input type='button' (click)='_onShuffleClick()' value='Shuffle'/>
+    <div (click)='_onShuffleClick()' class='shuffle-button-container'>
+        <div [hidden]='!_isShuffleOn' class='shuffle-count' [innerHtml]='_shuffleCount'></div>
+        <i class="fa fa-random" [class.shuffle-on]='_isShuffleOn' aria-hidden="true"></i>
+    </div>
 </header>
 
-<main class='main-content-container' shuffle>
+<main class='main-content-container' shuffle (shuffleCount)='_onShuffleCount($event)'>
     <md-card id='{{a2Country}}-summary' 
             class='country-summary' 
+            [class.shrink-mode]='_isShuffleOn'
             *ngFor='let a2Country of _countriesKeys'>
             
         <div class='flag-container'>
             <app-country-flag [alpha2]='a2Country' [height]='63' [width]='85'></app-country-flag>
         </div>
         
-        <md-card-subtitle [innerHtml]='a2Country'></md-card-subtitle>
+        <div *ngIf='!_isShuffleOn'>
+            <md-card-subtitle [innerHtml]='a2Country'></md-card-subtitle>
 
-        <md-card-title>
-            <speaker [text]='a2Country | a2ToCountry' [gender]='_gender'></speaker>
-        </md-card-title>
+            <md-card-title>
+                <speaker [text]='a2Country | a2ToCountry' [gender]='_gender'></speaker>
+            </md-card-title>
 
-        <md-card-subtitle>
-            <country-native-name-speaker [alpha2]='a2Country' [gender]='_gender'></country-native-name-speaker>      
-        </md-card-subtitle>
+            <md-card-subtitle>
+                <country-native-name-speaker [alpha2]='a2Country' [gender]='_gender'></country-native-name-speaker>      
+            </md-card-subtitle>
 
-        <md-card-content>
-            <p>
-                <span>Capital: </span>{{ a2Country | a2ToCapital }}
-            </p>
+            <md-card-content>
+                <p>
+                    <span>Capital: </span>{{ a2Country | a2ToCapital }}
+                </p>
 
-            <p>
-                <span>Continent: </span>{{ a2Country | a2ToContinent }}
-            </p>
+                <p>
+                    <span>Continent: </span>{{ a2Country | a2ToContinent }}
+                </p>
 
-            <app-anthem *ngIf='_anthemsData[a2Country]' [alpha2]='a2Country'></app-anthem>
+                <app-anthem *ngIf='_anthemsData[a2Country]' [alpha2]='a2Country'></app-anthem>
 
-            <app-country-borders [alpha2]='a2Country'></app-country-borders>        
-        </md-card-content>
+                <app-country-borders [alpha2]='a2Country'></app-country-borders>        
+            </md-card-content>
+        </div>
     </md-card>
 </main>

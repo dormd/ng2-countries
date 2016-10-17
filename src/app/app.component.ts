@@ -21,6 +21,8 @@ export class AppComponent {
     private _countriesKeys: string[];
     private _anthems: Object = {};
     private _gender;
+    private _isShuffleOn = false;
+    private _shuffleCount = 0;
 
     constructor(private _wikipediaService: WikipediaService,
                 private _speakerService: SpeakerService,
@@ -41,6 +43,14 @@ export class AppComponent {
 
     private _onShuffleClick() {
         this._shuffleDirective.toggle();
+        this._isShuffleOn = !this._isShuffleOn;
+
+        if (this._isShuffleOn)
+            this._shuffleCount = 0;
+    }
+
+    private _onShuffleCount(count) {
+        this._shuffleCount = count;
     }
 
     // private _getAnthemWikiLink(commonCountryName: string) {
