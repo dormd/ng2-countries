@@ -64,6 +64,6 @@ export class AnimationsService {
         );
 
         if (options.callback)
-            setTimeout(options.callback, ms)
+            setTimeout(options.callback, ms * 0.9)
     }
 }
