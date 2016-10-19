@@ -1,23 +1,21 @@
 <header>
     <h1>Ng2 Countries | By dormd</h1>
-    <div (click)='_onShuffleClick()' class='shuffle-button-container'>
-        <div [hidden]='!_isShuffleOn' class='shuffle-count' [innerHtml]='_shuffleCount'></div>
-        <i class="fa fa-random" [class.shuffle-on]='_isShuffleOn' aria-hidden="true"></i>
-    </div>
+    <shuffle-button [count]='_shuffleCount' (shuffleClick)='_onShuffleClick()'></shuffle-button>
+    <div (click)='_onSortByArea()'>Sort By Area</div>
+    <div (click)='_onSortByPopulation()'>Sort By Pop</div>    
 </header>
 
 <main class='main-content-container' shuffle (shuffleCount)='_onShuffleCount($event)'>
     <md-card id='{{a2Country}}-summary' 
             class='country-summary' 
             [class.shrink-mode]='_isShuffleOn'
-            *ngFor='let a2Country of _countriesKeys'>
-            
+            *ngFor='let a2Country of _countriesKeys; let i = index'>
+        
         <div class='flag-container'>
             <app-country-flag [alpha2]='a2Country' [height]='63' [width]='85'></app-country-flag>
         </div>
         
         <div *ngIf='!_isShuffleOn'>
-            <md-card-subtitle [innerHtml]='a2Country'></md-card-subtitle>
 
             <md-card-title>
                 <speaker [text]='a2Country | a2ToCountry' [gender]='_gender'></speaker>
@@ -36,9 +34,22 @@
                     <span>Continent: </span>{{ a2Country | a2ToContinent }}
                 </p>
 
-                <app-anthem *ngIf='_anthemsData[a2Country]' [alpha2]='a2Country'></app-anthem>
+                <p>
+                    <span>Population: </span> {{ a2Country | a2ToPopulation | commaStyle }}
+                </p>
 
-                <app-country-borders [alpha2]='a2Country'></app-country-borders>        
+                <p>
+                    <span>Area: </span> 
+                    {{ a2Country | a2ToArea | commaStyle }} km<sup><small>2</small></sup>
+                </p>
+
+                <div *ngIf='_anthemsData[a2Country]' class='country-borders-container'>
+                    <app-anthem [alpha2]='a2Country'></app-anthem>
+                </div>
+                
+                <app-country-borders [alpha2]='a2Country'></app-country-borders>
+
+                <span *ngIf='_isSortMode' class='serial-number'>#{{ i + 1}}</span>                    
             </md-card-content>
         </div>
     </md-card>

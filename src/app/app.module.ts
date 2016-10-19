@@ -11,17 +11,17 @@ import { CountryFlagComponent,
          CountriesBarComponent,
          AnthemComponent }   from './components';
 
-import { ShuffleDirective }  from './directives'
-
 import { A2ToCountryPipe,
          A2ToCapitalPipe,
          A2ToContinentPipe,
          A2ToAnthemPipe,
+         A2ToAreaPipe,
+         A2ToPopulationPipe,
+         CommaStylePipe,
          A3ToA2Pipe,
          SafePipe, }         from './pipes';
 
-import { WikipediaService,
-         AnimationsService } from './services';
+import { WikipediaService }  from './services';
 import { ANTHEMS_DATA }      from './models';
 import { AnthemsData }       from '../assets/data';
 
@@ -40,37 +40,37 @@ const components = [
     AppComponent
 ];
 
-const directives = [
-    ShuffleDirective
-];
+const directives = [];
 
 const pipes = [
     A2ToCapitalPipe,
     A2ToContinentPipe,
     A2ToCountryPipe,
     A2ToAnthemPipe,
+    A2ToAreaPipe,
+    A2ToPopulationPipe,
     A3ToA2Pipe,
+    CommaStylePipe,
     SafePipe
 ];
 
 const providers = [
     { provide: ANTHEMS_DATA, useValue: AnthemsData },
     WikipediaService,
-    AnimationsService
 ]
 
 @NgModule({
-  declarations: [
-    ...components,
-    ...directives,
-    ...pipes
-  ],
-  imports: [
-    ...modules
-  ],
-  providers: [
-    ...providers
-  ],
-  bootstrap: [ AppComponent ]
+    declarations: [
+      ...components,
+      ...directives,
+      ...pipes
+    ],
+    imports: [
+      ...modules
+    ],
+    providers: [
+      ...providers
+    ],
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }

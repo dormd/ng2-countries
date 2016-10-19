@@ -20,6 +20,11 @@ export interface ICountry {
         official: string,
         native: IStringToOfficialCommon
     },
+    population: {
+        count: number,
+        worldPercentage: number
+    },
+    wikiLink: string,
     demonym: string,
     capital: string,
     iso_3166_1_alpha2: string,
