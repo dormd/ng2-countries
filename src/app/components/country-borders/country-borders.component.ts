@@ -4,7 +4,7 @@ import { Component, Input,
          HostListener, ViewChild }   from '@angular/core';
 
 import { COUNTRIES_DATA, Countries, ICountry } from '../../modules/shared/models';
-import { AnimationsService } from '../../services/animations.service';
+import { AnimationsService } from '../../modules/shared/services';
 
 import * as _ from 'lodash';
 declare const $;

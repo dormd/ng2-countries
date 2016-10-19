@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter, ElementRef, Renderer }   from '@angular/core';
-import { AnimationsService } from '../../services/animations.service';
+import { AnimationsService } from '../../modules/shared/services';
 
 @Component({
     selector: 'app-country-flag',
