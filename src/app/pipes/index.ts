@@ -2,6 +2,8 @@ export * from './a2-to-capital.pipe';
 export * from './a2-to-continent.pipe';
 export * from './a2-to-country.pipe';
 export * from './a2-to-anthem.pipe';
-export * from './a3-to-a2.pipe'
+export * from './a3-to-a2.pipe';
+export * from './a2-to-area.pipe';
+export * from './a2-to-population.pipe';
 export * from './safe.pipe';
-// export * from './country-to-a2.pipe';
+export * from './comma-style.pipe';
