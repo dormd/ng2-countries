@@ -1,0 +1,23 @@
+.shuffle-on {
+    color: orangered;
+}
+
+.shuffle-button-container {
+    position: absolute;
+    right: 35px;
+    top: 16px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+.shuffle-count {
+    position: absolute;
+    left: 28px;
+    top: -11px;
+    font-size: .5em;
+    padding: 2px;
+    border-radius: 6px;
+    color: white;
+    background-color: rgba(40, 40, 191, 0.72)
+}

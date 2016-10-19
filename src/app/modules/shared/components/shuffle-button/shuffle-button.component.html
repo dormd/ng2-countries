@@ -1,0 +1,14 @@
+<div (click)='_onClick()' class='shuffle-button-container'>
+    
+    <div [hidden]='!_isShuffleOn' 
+         class='shuffle-count' 
+         [innerHtml]='count'>
+    </div>
+    
+    <i #icon
+       class="fa fa-random" 
+       [class.shuffle-on]='_isShuffleOn'     
+       (mouseenter)='_onMouseEnter()' 
+       aria-hidden="true">
+    </i>
+</div>
