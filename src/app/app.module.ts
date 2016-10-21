@@ -5,10 +5,14 @@ import { SharedModule,
          SpeakerModule }     from './modules';
 
 import { AppComponent }      from './app.component';
-import { CountryFlagComponent,
+import { CountryDetailsComponent,
+         CountryFlagComponent,
          CountryOutlineComponent,
          CountryBordersComponent,
          CountriesBarComponent,
+         CountryGalleryComponent,
+         CoatOfArmsComponent,
+         WorldFlagsMapComponent,
          AnthemComponent }   from './components';
 
 import { A2ToCountryPipe,
@@ -17,6 +21,7 @@ import { A2ToCountryPipe,
          A2ToAnthemPipe,
          A2ToAreaPipe,
          A2ToPopulationPipe,
+         A2ToWikiLinkPipe,
          CommaStylePipe,
          A3ToA2Pipe,
          SafePipe, }         from './pipes';
@@ -32,10 +37,14 @@ const modules = [
 ];
 
 const components = [
+    CountryDetailsComponent,
     CountryFlagComponent,
     CountryOutlineComponent,
     CountryBordersComponent,
     CountriesBarComponent,
+    CountryGalleryComponent,
+    CoatOfArmsComponent,
+    WorldFlagsMapComponent,
     AnthemComponent,
     AppComponent
 ];
@@ -49,6 +58,7 @@ const pipes = [
     A2ToAnthemPipe,
     A2ToAreaPipe,
     A2ToPopulationPipe,
+    A2ToWikiLinkPipe,
     A3ToA2Pipe,
     CommaStylePipe,
     SafePipe
