@@ -1,0 +1,10 @@
+.world {
+    position: relative;
+    width: 720px;
+    height: 360px;
+    background: lightblue;
+}
+
+.country-flag-container {
+    position: absolute;
+}

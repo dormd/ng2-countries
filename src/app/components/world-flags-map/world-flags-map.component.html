@@ -1,0 +1,13 @@
+<div class='world'>
+    <div *ngFor='let a2Country of _countriesKeys'
+        [style.top.px]='_getCountryTop(a2Country)'
+        [style.left.px]='_getCountryLeft(a2Country)'
+        class='country-flag-container'>
+        
+        <app-country-flag 
+                [alpha2]='a2Country' 
+                [height]='13' 
+                [width]='13'>
+        </app-country-flag>
+    </div>
+</div>
