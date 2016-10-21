@@ -1,4 +1,5 @@
-span {
+.flag {
     cursor: pointer;
     border-radius: 10px;
+    vertical-align: bottom;
 }

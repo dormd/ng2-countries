@@ -9,8 +9,9 @@ import { AnimationsService } from '../../modules/shared/services';
 
 export class CountryFlagComponent implements OnInit {
     @Input() alpha2: string;
-    @Input() height: number = 30;
-    @Input() width: number = 30;
+    @Input() height = 30;
+    @Input() width = 30;
+    @Input() isAnimationAllowed = true;
 
     @Output() flagClick = new EventEmitter();
  
@@ -25,12 +26,14 @@ export class CountryFlagComponent implements OnInit {
 
         this._classes = {
             'flag-icon': true,
-            [countryIconClass]: true
+            [countryIconClass]: true,
+            'flag': true
         };
     }
 
     private _onOver(event) {
-        this._animationsService.makeBigger(event.target, this._renderer);
+        if (this.isAnimationAllowed)
+            this._animationsService.makeBigger(event.target, this._renderer);
     }
 
     private _onClick() {
