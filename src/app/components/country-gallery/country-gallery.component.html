@@ -1,0 +1,50 @@
+<div class='selected-image-container'>
+    <app-country-flag   
+        *ngIf='_selectedImage === 0'
+        [alpha2]='alpha2' 
+        [height]='_bigHeight'
+        [width]='_bigWidth'>
+    </app-country-flag>
+
+    <coat-of-arms 
+         *ngIf='_selectedImage === 1' 
+         [alpha2]='alpha2' 
+         [height]='_bigHeight'
+         [width]='_bigWidth'>
+    </coat-of-arms>
+
+    <app-country-outline 
+         *ngIf='_selectedImage === 2' 
+         [alpha2]='alpha2' 
+         [height]='_bigOutlineHeight'
+         [width]='_bigOutlineWidth'>
+    </app-country-outline>
+</div>
+
+<div class='selectable-images-container'>
+    <app-country-flag   
+        [alpha2]='alpha2' 
+        [height]='_littleHeight'
+        [width]='_littleWidth'
+        [isAnimationAllowed]='false'
+        (mouseenter)='_onMouseEnterFlag($event)'>
+    </app-country-flag>
+
+    <coat-of-arms 
+         *ngIf='!isCoatOfArmsHide'
+         [alpha2]='alpha2' 
+         [height]='_littleHeight'
+         [width]='_littleWidth'
+         [isAnimationAllowed]='false'
+         (mouseenter)='_onMouseEnterCoatOfArms($event)'>
+    </coat-of-arms>
+
+    <app-country-outline 
+         *ngIf='!isOutlinesHide'
+         [alpha2]='alpha2' 
+         [height]='_littleHeight'
+         [width]='_littleWidth'
+         [isAnimationAllowed]='false'                  
+         (mouseenter)='_onMouseEnterOutline($event)'>
+    </app-country-outline>
+</div>
