@@ -19,12 +19,7 @@ export interface ICountry {
         common: string,
         official: string,
         native: IStringToOfficialCommon
-    },
-    population: {
-        count: number,
-        worldPercentage: number
-    },
-    wikiLink: string,
+    },    
     demonym: string,
     capital: string,
     iso_3166_1_alpha2: string,
@@ -94,7 +89,14 @@ export interface ICountry {
             super_reduced: number,
             parking: number
         }
-    }
+    },
+    population: {
+        count: number,
+        worldPercentage: number
+    },
+    wikiLink: string,
+    isOutlinesImgExist?: boolean,
+    isCoatOfArmsImgExist?: boolean,
 }
 
 export class Countries {

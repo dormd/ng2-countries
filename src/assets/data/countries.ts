@@ -590,7 +590,8 @@ export const CountriesData: Countries = {
       "count": 13452,
       "worldPercentage": 0.00018
     },
-    "wikiLink": "\/wiki\/Anguilla"
+    "wikiLink": "\/wiki\/Anguilla",
+    "isOutlinesImgExist": false
   },
   "AX": {
     "name": {
@@ -732,7 +733,8 @@ export const CountriesData: Countries = {
       "count": 29013,
       "worldPercentage": 0.00038
     },
-    "wikiLink": "\/wiki\/%C3%85land_Islands"
+    "wikiLink": "\/wiki\/%C3%85land_Islands",
+    "isOutlinesImgExist": false
   },
   "AL": {
     "name": {
@@ -1633,7 +1635,8 @@ export const CountriesData: Countries = {
       "count": 57100,
       "worldPercentage": 0.00077
     },
-    "wikiLink": "\/wiki\/American_Samoa"
+    "wikiLink": "\/wiki\/American_Samoa",
+    "isOutlinesImgExist": false
   },
   "AQ": {
     "name": {
@@ -1771,7 +1774,9 @@ export const CountriesData: Countries = {
       "count": 5000,
       "worldPercentage": 6.7e-5
     },
-    "wikiLink": "\/wiki\/Antarctica"
+    "wikiLink": "\/wiki\/Antarctica",
+    "isCoatOfArmsImgExist": false,
+    "isOutlinesImgExist": false
   },
   "TF": {
     "name": {
@@ -1911,7 +1916,8 @@ export const CountriesData: Countries = {
       "count": 280,
       "worldPercentage": 3.7e-6
     },
-    "wikiLink": "\/wiki\/French_Southern_and_Antarctic_Lands"
+    "wikiLink": "\/wiki\/French_Southern_and_Antarctic_Lands",
+    "isOutlinesImgExist": false
   },
   "AG": {
     "name": {
@@ -2054,7 +2060,8 @@ export const CountriesData: Countries = {
       "count": 86295,
       "worldPercentage": 0.0012
     },
-    "wikiLink": "\/wiki\/Antigua_and_Barbuda"
+    "wikiLink": "\/wiki\/Antigua_and_Barbuda",
+    "isOutlinesImgExist": false
   },
   "AU": {
     "name": {
@@ -3445,7 +3452,8 @@ export const CountriesData: Countries = {
       "count": 7153784,
       "worldPercentage": 0.096
     },
-    "wikiLink": "\/wiki\/Bulgaria"
+    "wikiLink": "\/wiki\/Bulgaria",
+    "isOutlinesImgExist": false
   },
   "BH": {
     "name": {
@@ -4033,7 +4041,8 @@ export const CountriesData: Countries = {
       "count": 9417,
       "worldPercentage": 0.00013
     },
-    "wikiLink": "\/wiki\/Saint_Barth%C3%A9lemy"
+    "wikiLink": "\/wiki\/Saint_Barth%C3%A9lemy",
+    "isOutlinesImgExist": false
   },
   "BY": {
     "name": {
@@ -5405,7 +5414,9 @@ export const CountriesData: Countries = {
       "count": 0,
       "worldPercentage": 0
     },
-    "wikiLink": "\/wiki\/Bouvet_Island"
+    "wikiLink": "\/wiki\/Bouvet_Island",
+    "isCoatOfArmsImgExist": false,
+    "isOutlinesImgExist": false
   },
   "BW": {
     "name": {
@@ -5857,7 +5868,8 @@ export const CountriesData: Countries = {
       "count": 36334400,
       "worldPercentage": 0.487
     },
-    "wikiLink": "\/wiki\/Canada"
+    "wikiLink": "\/wiki\/Canada",
+    "isCoatOfArmsImgExist": false
   },
   "CC": {
     "name": {
@@ -6002,7 +6014,9 @@ export const CountriesData: Countries = {
       "count": 550,
       "worldPercentage": 7.4e-6
     },
-    "wikiLink": "\/wiki\/Cocos_(Keeling)_Islands"
+    "wikiLink": "\/wiki\/Cocos_(Keeling)_Islands",
+    "isCoatOfArmsImgExist": false,
+    "isOutlinesImgExist": false
   },
   "CH": {
     "name": {
@@ -7288,7 +7302,8 @@ export const CountriesData: Countries = {
       "count": 18100,
       "worldPercentage": 0.00024
     },
-    "wikiLink": "\/wiki\/Cook_Islands"
+    "wikiLink": "\/wiki\/Cook_Islands",
+    "isOutlinesImgExist": false
   },
   "CO": {
     "name": {
@@ -7740,7 +7755,8 @@ export const CountriesData: Countries = {
       "count": 531239,
       "worldPercentage": 0.0071
     },
-    "wikiLink": "\/wiki\/Cape_Verde"
+    "wikiLink": "\/wiki\/Cape_Verde",
+    "isOutlinesImgExist": false
   },
   "CR": {
     "name": {
@@ -8179,7 +8195,8 @@ export const CountriesData: Countries = {
       "count": 158986,
       "worldPercentage": 0.0021
     },
-    "wikiLink": "\/wiki\/Cura%C3%A7ao"
+    "wikiLink": "\/wiki\/Cura%C3%A7ao",
+    "isOutlinesImgExist": false
   },
   "CX": {
     "name": {
@@ -8323,7 +8340,9 @@ export const CountriesData: Countries = {
       "count": 2072,
       "worldPercentage": 2.8e-5
     },
-    "wikiLink": "\/wiki\/Christmas_Island"
+    "wikiLink": "\/wiki\/Christmas_Island",
+    "isCoatOfArmsImgExist": false,
+    "isOutlinesImgExist": false
   },
   "KY": {
     "name": {
@@ -8466,7 +8485,8 @@ export const CountriesData: Countries = {
       "count": 60413,
       "worldPercentage": 0.00081
     },
-    "wikiLink": "\/wiki\/Cayman_Islands"
+    "wikiLink": "\/wiki\/Cayman_Islands",
+    "isOutlinesImgExist": false
   },
   "CY": {
     "name": {
@@ -10321,7 +10341,9 @@ export const CountriesData: Countries = {
       "count": 584000,
       "worldPercentage": 0.0078
     },
-    "wikiLink": "\/wiki\/Western_Sahara"
+    "wikiLink": "\/wiki\/Western_Sahara",
+    "isCoatOfArmsImgExist": false,
+    "isOutlinesImgExist": false
   },
   "ES": {
     "name": {
@@ -11110,7 +11132,8 @@ export const CountriesData: Countries = {
       "count": 867000,
       "worldPercentage": 0.0116
     },
-    "wikiLink": "\/wiki\/Fiji"
+    "wikiLink": "\/wiki\/Fiji",
+    "isOutlinesImgExist": false
   },
   "FK": {
     "name": {
@@ -11251,7 +11274,8 @@ export const CountriesData: Countries = {
       "count": 2563,
       "worldPercentage": 3.4e-5
     },
-    "wikiLink": "\/wiki\/Falkland_Islands"
+    "wikiLink": "\/wiki\/Falkland_Islands",
+    "isOutlinesImgExist": false
   },
   "FR": {
     "name": {
@@ -11554,7 +11578,8 @@ export const CountriesData: Countries = {
       "count": 49755,
       "worldPercentage": 0.00067
     },
-    "wikiLink": "\/wiki\/Faroe_Islands"
+    "wikiLink": "\/wiki\/Faroe_Islands",
+    "isOutlinesImgExist": false
   },
   "FM": {
     "name": {
@@ -11695,7 +11720,8 @@ export const CountriesData: Countries = {
       "count": 102800,
       "worldPercentage": 0.0014
     },
-    "wikiLink": "\/wiki\/Federated_States_of_Micronesia"
+    "wikiLink": "\/wiki\/Federated_States_of_Micronesia",
+    "isOutlinesImgExist": false
   },
   "GA": {
     "name": {
@@ -12284,7 +12310,8 @@ export const CountriesData: Countries = {
       "count": 63001,
       "worldPercentage": 0.00084
     },
-    "wikiLink": "\/wiki\/Guernsey"
+    "wikiLink": "\/wiki\/Guernsey",
+    "isOutlinesImgExist": false
   },
   "GH": {
     "name": {
@@ -12567,7 +12594,8 @@ export const CountriesData: Countries = {
       "count": 33140,
       "worldPercentage": 0.00044
     },
-    "wikiLink": "\/wiki\/Gibraltar"
+    "wikiLink": "\/wiki\/Gibraltar",
+    "isOutlinesImgExist": false
   },
   "GN": {
     "name": {
@@ -12853,7 +12881,8 @@ export const CountriesData: Countries = {
       "count": 471497,
       "worldPercentage": 0.0063
     },
-    "wikiLink": "\/wiki\/Guadeloupe"
+    "wikiLink": "\/wiki\/Guadeloupe",
+    "isOutlinesImgExist": false
   },
   "GM": {
     "name": {
@@ -14009,7 +14038,8 @@ export const CountriesData: Countries = {
       "count": 254541,
       "worldPercentage": 0.0034
     },
-    "wikiLink": "\/wiki\/French_Guiana"
+    "wikiLink": "\/wiki\/French_Guiana",
+    "isOutlinesImgExist": false
   },
   "GU": {
     "name": {
@@ -14159,7 +14189,8 @@ export const CountriesData: Countries = {
       "count": 184200,
       "worldPercentage": 0.0025
     },
-    "wikiLink": "\/wiki\/Guam"
+    "wikiLink": "\/wiki\/Guam",
+    "isOutlinesImgExist": false
   },
   "GY": {
     "name": {
@@ -14447,7 +14478,8 @@ export const CountriesData: Countries = {
       "count": 7346700,
       "worldPercentage": 0.099
     },
-    "wikiLink": "\/wiki\/Hong_Kong"
+    "wikiLink": "\/wiki\/Hong_Kong",
+    "isOutlinesImgExist": false
   },
   "HM": {
     "name": {
@@ -14588,7 +14620,9 @@ export const CountriesData: Countries = {
       "count": 0,
       "worldPercentage": 0
     },
-    "wikiLink": "\/wiki\/Heard_Island_and_McDonald_Islands"
+    "wikiLink": "\/wiki\/Heard_Island_and_McDonald_Islands",
+    "isCoatOfArmsImgExist": false,
+    "isOutlinesImgExist": false
   },
   "HN": {
     "name": {
@@ -15490,7 +15524,8 @@ export const CountriesData: Countries = {
       "count": 84497,
       "worldPercentage": 0.0011
     },
-    "wikiLink": "\/wiki\/Isle_of_Man"
+    "wikiLink": "\/wiki\/Isle_of_Man",
+    "isOutlinesImgExist": false
   },
   "IN": {
     "name": {
@@ -15799,7 +15834,8 @@ export const CountriesData: Countries = {
       "count": 3000,
       "worldPercentage": 4.0e-5
     },
-    "wikiLink": "\/wiki\/British_Indian_Ocean_Territory"
+    "wikiLink": "\/wiki\/British_Indian_Ocean_Territory",
+    "isOutlinesImgExist": false
   },
   "IE": {
     "name": {
@@ -17012,7 +17048,8 @@ export const CountriesData: Countries = {
       "count": 102700,
       "worldPercentage": 0.0014
     },
-    "wikiLink": "\/wiki\/Jersey"
+    "wikiLink": "\/wiki\/Jersey",
+    "isOutlinesImgExist": false
   },
   "JO": {
     "name": {
@@ -18051,7 +18088,8 @@ export const CountriesData: Countries = {
       "count": 113400,
       "worldPercentage": 0.0015
     },
-    "wikiLink": "\/wiki\/Kiribati"
+    "wikiLink": "\/wiki\/Kiribati",
+    "isOutlinesImgExist": false
   },
   "KN": {
     "name": {
@@ -18466,7 +18504,8 @@ export const CountriesData: Countries = {
       "count": 1836978,
       "worldPercentage": 0.025
     },
-    "wikiLink": "\/wiki\/Kosovo"
+    "wikiLink": "\/wiki\/Kosovo",
+    "isOutlinesImgExist": false
   },
   "KW": {
     "name": {
@@ -20388,7 +20427,8 @@ export const CountriesData: Countries = {
       "count": 652500,
       "worldPercentage": 0.009
     },
-    "wikiLink": "\/wiki\/Macau"
+    "wikiLink": "\/wiki\/Macau",
+    "isOutlinesImgExist": false
   },
   "MF": {
     "name": {
@@ -20531,7 +20571,8 @@ export const CountriesData: Countries = {
       "count": 36286,
       "worldPercentage": 0.00048
     },
-    "wikiLink": "\/wiki\/Collectivity_of_Saint_Martin"
+    "wikiLink": "\/wiki\/Collectivity_of_Saint_Martin",
+    "isOutlinesImgExist": false
   },
   "MA": {
     "name": {
@@ -21254,7 +21295,8 @@ export const CountriesData: Countries = {
       "count": 344023,
       "worldPercentage": 0.0046
     },
-    "wikiLink": "\/wiki\/Maldives"
+    "wikiLink": "\/wiki\/Maldives",
+    "isOutlinesImgExist": false
   },
   "MX": {
     "name": {
@@ -21546,7 +21588,8 @@ export const CountriesData: Countries = {
       "count": 54880,
       "worldPercentage": 0.00074
     },
-    "wikiLink": "\/wiki\/Marshall_Islands"
+    "wikiLink": "\/wiki\/Marshall_Islands",
+    "isOutlinesImgExist": false
   },
   "MK": {
     "name": {
@@ -22579,7 +22622,8 @@ export const CountriesData: Countries = {
       "count": 56940,
       "worldPercentage": 0.00076
     },
-    "wikiLink": "\/wiki\/Northern_Mariana_Islands"
+    "wikiLink": "\/wiki\/Northern_Mariana_Islands",
+    "isOutlinesImgExist": false
   },
   "MZ": {
     "name": {
@@ -23148,7 +23192,8 @@ export const CountriesData: Countries = {
       "count": 378243,
       "worldPercentage": 0.0051
     },
-    "wikiLink": "\/wiki\/Martinique"
+    "wikiLink": "\/wiki\/Martinique",
+    "isCoatOfArmsImgExist": false
   },
   "MU": {
     "name": {
@@ -23734,7 +23779,8 @@ export const CountriesData: Countries = {
       "count": 226915,
       "worldPercentage": 0.003
     },
-    "wikiLink": "\/wiki\/Mayotte"
+    "wikiLink": "\/wiki\/Mayotte",
+    "isOutlinesImgExist": false
   },
   "NA": {
     "name": {
@@ -24064,7 +24110,8 @@ export const CountriesData: Countries = {
       "count": 268767,
       "worldPercentage": 0.0036
     },
-    "wikiLink": "\/wiki\/New_Caledonia"
+    "wikiLink": "\/wiki\/New_Caledonia",
+    "isOutlinesImgExist": false
   },
   "NE": {
     "name": {
@@ -24356,7 +24403,8 @@ export const CountriesData: Countries = {
       "count": 2302,
       "worldPercentage": 3.1e-5
     },
-    "wikiLink": "\/wiki\/Norfolk_Island"
+    "wikiLink": "\/wiki\/Norfolk_Island",
+    "isOutlinesImgExist": false
   },
   "NG": {
     "name": {
@@ -24788,7 +24836,8 @@ export const CountriesData: Countries = {
       "count": 1470,
       "worldPercentage": 2.0e-5
     },
-    "wikiLink": "\/wiki\/Niue"
+    "wikiLink": "\/wiki\/Niue",
+    "isOutlinesImgExist": false
   },
   "NL": {
     "name": {
@@ -25535,7 +25584,8 @@ export const CountriesData: Countries = {
       "count": 4724180,
       "worldPercentage": 0.0634
     },
-    "wikiLink": "\/wiki\/New_Zealand"
+    "wikiLink": "\/wiki\/New_Zealand",
+    "isOutlinesImgExist": false
   },
   "OM": {
     "name": {
@@ -26118,7 +26168,8 @@ export const CountriesData: Countries = {
       "count": 57,
       "worldPercentage": 7.5e-7
     },
-    "wikiLink": "\/wiki\/Pitcairn_Islands"
+    "wikiLink": "\/wiki\/Pitcairn_Islands",
+    "isOutlinesImgExist": false
   },
   "PE": {
     "name": {
@@ -26568,7 +26619,8 @@ export const CountriesData: Countries = {
       "count": 17950,
       "worldPercentage": 0.00024
     },
-    "wikiLink": "\/wiki\/Palau"
+    "wikiLink": "\/wiki\/Palau",
+    "isOutlinesImgExist": false
   },
   "PG": {
     "name": {
@@ -27753,7 +27805,8 @@ export const CountriesData: Countries = {
       "count": 271800,
       "worldPercentage": 0.0036
     },
-    "wikiLink": "\/wiki\/French_Polynesia"
+    "wikiLink": "\/wiki\/French_Polynesia",
+    "isOutlinesImgExist": false
   },
   "QA": {
     "name": {
@@ -28035,7 +28088,8 @@ export const CountriesData: Countries = {
       "count": 844994,
       "worldPercentage": 0.011
     },
-    "wikiLink": "\/wiki\/R\u00e9union"
+    "wikiLink": "\/wiki\/R\u00e9union",
+    "isOutlinesImgExist": false
   },
   "RO": {
     "name": {
@@ -28805,7 +28859,8 @@ export const CountriesData: Countries = {
       "count": 41176000,
       "worldPercentage": 0.55
     },
-    "wikiLink": "\/wiki\/Sudan"
+    "wikiLink": "\/wiki\/Sudan",
+    "isOutlinesImgExist": false
   },
   "SN": {
     "name": {
@@ -29250,7 +29305,8 @@ export const CountriesData: Countries = {
       "count": 30,
       "worldPercentage": 4.0e-8
     },
-    "wikiLink": "\/wiki\/South_Georgia_and_the_South_Sandwich_Islands"
+    "wikiLink": "\/wiki\/South_Georgia_and_the_South_Sandwich_Islands",
+    "isOutlinesImgExist": false
   },
   "SJ": {
     "name": {
@@ -29390,7 +29446,9 @@ export const CountriesData: Countries = {
       "count": 2677,
       "worldPercentage": 3.5e-5
     },
-    "wikiLink": "\/wiki\/Svalbard_and_Jan_Mayen"
+    "wikiLink": "\/wiki\/Svalbard_and_Jan_Mayen",
+    "isCoatOfArmsImgExist": false,
+    "isOutlinesImgExist": false
   },
   "SB": {
     "name": {
@@ -29529,7 +29587,8 @@ export const CountriesData: Countries = {
       "count": 642000,
       "worldPercentage": 0.009
     },
-    "wikiLink": "\/wiki\/Solomon_Islands"
+    "wikiLink": "\/wiki\/Solomon_Islands",
+    "isOutlinesImgExist": false
   },
   "SL": {
     "name": {
@@ -30257,7 +30316,8 @@ export const CountriesData: Countries = {
       "count": 6286,
       "worldPercentage": 8.4e-5
     },
-    "wikiLink": "\/wiki\/Saint_Pierre_and_Miquelon"
+    "wikiLink": "\/wiki\/Saint_Pierre_and_Miquelon",
+    "isOutlinesImgExist": false
   },
   "RS": {
     "name": {
@@ -30695,7 +30755,8 @@ export const CountriesData: Countries = {
       "count": 187356,
       "worldPercentage": 0.0025
     },
-    "wikiLink": "\/wiki\/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe"
+    "wikiLink": "\/wiki\/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe",
+    "isOutlinesImgExist": false
   },
   "SR": {
     "name": {
@@ -31589,7 +31650,8 @@ export const CountriesData: Countries = {
       "count": 38247,
       "worldPercentage": 0.00051
     },
-    "wikiLink": "\/wiki\/Sint_Maarten"
+    "wikiLink": "\/wiki\/Sint_Maarten",
+    "isOutlinesImgExist": false
   },
   "SC": {
     "name": {
@@ -32027,7 +32089,8 @@ export const CountriesData: Countries = {
       "count": 31458,
       "worldPercentage": 0.00042
     },
-    "wikiLink": "\/wiki\/Turks_and_Caicos_Islands"
+    "wikiLink": "\/wiki\/Turks_and_Caicos_Islands",
+    "isOutlinesImgExist": false
   },
   "TD": {
     "name": {
@@ -32776,7 +32839,8 @@ export const CountriesData: Countries = {
       "count": 1411,
       "worldPercentage": 1.9e-5
     },
-    "wikiLink": "\/wiki\/Tokelau"
+    "wikiLink": "\/wiki\/Tokelau",
+    "isOutlinesImgExist": false
   },
   "TM": {
     "name": {
@@ -33650,7 +33714,8 @@ export const CountriesData: Countries = {
       "count": 78741053,
       "worldPercentage": 1.06
     },
-    "wikiLink": "\/wiki\/Turkey"
+    "wikiLink": "\/wiki\/Turkey",
+    "isCoatOfArmsImgExist": false
   },
   "TV": {
     "name": {
@@ -33794,7 +33859,8 @@ export const CountriesData: Countries = {
       "count": 10640,
       "worldPercentage": 0.00014
     },
-    "wikiLink": "\/wiki\/Tuvalu"
+    "wikiLink": "\/wiki\/Tuvalu",
+    "isOutlinesImgExist": false
   },
   "TW": {
     "name": {
@@ -34538,7 +34604,8 @@ export const CountriesData: Countries = {
       "count": 300,
       "worldPercentage": 0.0014
     },
-    "wikiLink": "\/wiki\/United_States_Minor_Outlying_Islands"
+    "wikiLink": "\/wiki\/United_States_Minor_Outlying_Islands",
+    "isCoatOfArmsImgExist": false
   },
   "UY": {
     "name": {
@@ -34841,7 +34908,8 @@ export const CountriesData: Countries = {
       "count": 324723000,
       "worldPercentage": 4.35
     },
-    "wikiLink": "\/wiki\/United_States"
+    "wikiLink": "\/wiki\/United_States",
+    "isOutlinesImgExist": false
   },
   "UZ": {
     "name": {
@@ -35140,7 +35208,8 @@ export const CountriesData: Countries = {
       "count": 842,
       "worldPercentage": 1.1e-5
     },
-    "wikiLink": "\/wiki\/Vatican_City"
+    "wikiLink": "\/wiki\/Vatican_City",
+    "isOutlinesImgExist": false
   },
   "VC": {
     "name": {
@@ -35279,7 +35348,8 @@ export const CountriesData: Countries = {
       "count": 109991,
       "worldPercentage": 0.0015
     },
-    "wikiLink": "\/wiki\/Saint_Vincent_and_the_Grenadines"
+    "wikiLink": "\/wiki\/Saint_Vincent_and_the_Grenadines",
+    "isOutlinesImgExist": false
   },
   "VE": {
     "name": {
@@ -35563,7 +35633,8 @@ export const CountriesData: Countries = {
       "count": 28514,
       "worldPercentage": 0.00038
     },
-    "wikiLink": "\/wiki\/British_Virgin_Islands"
+    "wikiLink": "\/wiki\/British_Virgin_Islands",
+    "isOutlinesImgExist": false
   },
   "VI": {
     "name": {
@@ -35703,7 +35774,8 @@ export const CountriesData: Countries = {
       "count": 106000,
       "worldPercentage": 0.0014
     },
-    "wikiLink": "\/wiki\/United_States_Virgin_Islands"
+    "wikiLink": "\/wiki\/United_States_Virgin_Islands",
+    "isOutlinesImgExist": false
   },
   "VN": {
     "name": {
@@ -36145,7 +36217,8 @@ export const CountriesData: Countries = {
       "count": 11750,
       "worldPercentage": 0.00016
     },
-    "wikiLink": "\/wiki\/Wallis_and_Futuna"
+    "wikiLink": "\/wiki\/Wallis_and_Futuna",
+    "isOutlinesImgExist": false
   },
   "WS": {
     "name": {
@@ -36292,7 +36365,8 @@ export const CountriesData: Countries = {
       "count": 194899,
       "worldPercentage": 0.0026
     },
-    "wikiLink": "\/wiki\/Samoa"
+    "wikiLink": "\/wiki\/Samoa",
+    "isOutlinesImgExist": false
   },
   "YE": {
     "name": {
@@ -36633,7 +36707,8 @@ export const CountriesData: Countries = {
       "count": 55654000,
       "worldPercentage": 0.75
     },
-    "wikiLink": "\/wiki\/South_Africa"
+    "wikiLink": "\/wiki\/South_Africa",
+    "isCoatOfArmsImgExist": false
   },
   "ZM": {
     "name": {
@@ -37092,7 +37167,8 @@ export const CountriesData: Countries = {
       "count": 21133,
       "worldPercentage": 0.00028
     },
-    "wikiLink": "\/wiki\/Caribbean_Netherlands"
+    "wikiLink": "\/wiki\/Caribbean_Netherlands",
+    "isOutlinesImgExist": false
   },
   "SH": {
     "name": {
@@ -37184,6 +37260,7 @@ export const CountriesData: Countries = {
       "count": 4255,
       "worldPercentage": 5.7e-5
     },
-    "wikiLink": "\/wiki\/Saint_Helena"
+    "wikiLink": "\/wiki\/Saint_Helena",
+    "isOutlinesImgExist": false
   }
-};
+}
