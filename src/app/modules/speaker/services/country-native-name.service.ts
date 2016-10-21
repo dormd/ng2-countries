@@ -24,7 +24,7 @@ export class CountryNativeNameService {
             return null;
 
         const a3Lang = a3Languages[0];
-        console.log(a3Lang, nativeNames[a3Lang].common);
+        // console.log(a3Lang, nativeNames[a3Lang].common);
 
         return {
             name: nativeNames[a3Lang].common,
