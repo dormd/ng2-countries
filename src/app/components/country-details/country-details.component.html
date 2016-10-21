@@ -1,0 +1,56 @@
+<md-card id='{{ alpha2 }}-details' 
+        class='country-details' 
+        [class.shrink-mode]='isShrinkMode'>
+    
+    <div class='flag-container'>
+        <country-gallery 
+            [alpha2]='alpha2' 
+            [isOutlinesHide]='data.isOutlinesImgExist === false' 
+            [isCoatOfArmsHide]='data.isCoatOfArmsImgExist === false'>
+        </country-gallery>
+    </div>
+
+    <div *ngIf='!isShrinkMode'>
+
+        <a [hidden]='true' [href]='alpha2 | a2ToWikiLink'
+            target="_blank">
+            
+            <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+        </a>
+
+        <md-card-title>
+            <speaker [text]='alpha2 | a2ToCountry' [gender]='_gender'></speaker>
+        </md-card-title>
+
+        <md-card-subtitle>
+            <country-native-name-speaker [alpha2]='alpha2' [gender]='_gender'></country-native-name-speaker>      
+        </md-card-subtitle>
+
+        <md-card-content>
+            <p>
+                <span>Capital: </span>{{ alpha2 | a2ToCapital }}
+            </p>
+
+            <p>
+                <span>Continent: </span>{{ alpha2 | a2ToContinent }}
+            </p>
+
+            <p>
+                <span>Population: </span> {{ alpha2 | a2ToPopulation | commaStyle }}
+            </p>
+
+            <p>
+                <span>Area: </span> 
+                {{ alpha2 | a2ToArea | commaStyle }} km<sup><small>2</small></sup>
+            </p>
+
+            <div *ngIf='isAnthemExist' class='country-borders-container'>
+                <app-anthem [alpha2]='alpha2'></app-anthem>
+            </div>
+            
+            <app-country-borders [alpha2]='alpha2'></app-country-borders>
+
+            <span *ngIf='_isSortMode' class='serial-number'>#{{ i + 1}}</span>                    
+        </md-card-content>
+    </div>
+</md-card>

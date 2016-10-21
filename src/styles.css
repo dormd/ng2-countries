@@ -9,3 +9,8 @@ body {
     background: #374046;
     margin: 0px !important;
 }
+
+.angular-app-loading {
+    color: white;
+    font-size: 20px;
+}

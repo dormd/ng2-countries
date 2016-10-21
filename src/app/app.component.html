@@ -1,56 +1,29 @@
 <header>
     <h1>Ng2 Countries | By dormd</h1>
     <shuffle-button [count]='_shuffleCount' (shuffleClick)='_onShuffleClick()'></shuffle-button>
-    <div (click)='_onSortByArea()'>Sort By Area</div>
-    <div (click)='_onSortByPopulation()'>Sort By Pop</div>    
+    
+    <div class='sort-buttons-container'>
+        Sort:
+        <div (click)='_onSortByArea()'>
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </div>
+
+        <div (click)='_onSortByPopulation()'>
+            <i class="fa fa-male" aria-hidden="true"></i>
+        </div>    
+    </div>
 </header>
 
 <main class='main-content-container' shuffle (shuffleCount)='_onShuffleCount($event)'>
-    <md-card id='{{a2Country}}-summary' 
-            class='country-summary' 
-            [class.shrink-mode]='_isShuffleOn'
-            *ngFor='let a2Country of _countriesKeys; let i = index'>
-        
-        <div class='flag-container'>
-            <app-country-flag [alpha2]='a2Country' [height]='63' [width]='85'></app-country-flag>
-        </div>
-        
-        <div *ngIf='!_isShuffleOn'>
-
-            <md-card-title>
-                <speaker [text]='a2Country | a2ToCountry' [gender]='_gender'></speaker>
-            </md-card-title>
-
-            <md-card-subtitle>
-                <country-native-name-speaker [alpha2]='a2Country' [gender]='_gender'></country-native-name-speaker>      
-            </md-card-subtitle>
-
-            <md-card-content>
-                <p>
-                    <span>Capital: </span>{{ a2Country | a2ToCapital }}
-                </p>
-
-                <p>
-                    <span>Continent: </span>{{ a2Country | a2ToContinent }}
-                </p>
-
-                <p>
-                    <span>Population: </span> {{ a2Country | a2ToPopulation | commaStyle }}
-                </p>
-
-                <p>
-                    <span>Area: </span> 
-                    {{ a2Country | a2ToArea | commaStyle }} km<sup><small>2</small></sup>
-                </p>
-
-                <div *ngIf='_anthemsData[a2Country]' class='country-borders-container'>
-                    <app-anthem [alpha2]='a2Country'></app-anthem>
-                </div>
-                
-                <app-country-borders [alpha2]='a2Country'></app-country-borders>
-
-                <span *ngIf='_isSortMode' class='serial-number'>#{{ i + 1}}</span>                    
-            </md-card-content>
-        </div>
-    </md-card>
+    <!--<world-flags-map></world-flags-map>-->
+    
+    <country-details 
+        *ngFor='let a2Country of _countriesKeys; let i = index'
+        [data]='_countriesData[a2Country]'
+        [serialNum]='i + 1'
+        [isShrinkMode]='_isShuffleOn'
+        [isSerialNumShow]='_isSortMode'
+        [isAnthemExist]='_anthemsData.hasOwnProperty(a2Country)'>
+    
+    </country-details>
 </main>

@@ -1,29 +1,4 @@
-header {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-    background-color: #039BE5;
-}
-
-header h1 {
-    display: inline-block;
-    color: white; 
-    padding: 15px 0 15px 15px;   
-}
-
-.sort-buttons-container {
-    font-size: 16px;
-    color: white;
-}
-
-.sort-buttons-container div {
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.main-content-container {
-    padding: 15px;
-}
-
-.country-summary {
+.country-details {
     display: inline-table;
     position: relative;
     width: 250px;
