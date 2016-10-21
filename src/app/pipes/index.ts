@@ -5,5 +5,6 @@ export * from './a2-to-anthem.pipe';
 export * from './a3-to-a2.pipe';
 export * from './a2-to-area.pipe';
 export * from './a2-to-population.pipe';
+export * from './a2-to-wiki-link.pipe';
 export * from './safe.pipe';
 export * from './comma-style.pipe';
