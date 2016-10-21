@@ -1,1 +1,5 @@
-<span [ngClass]='_classes'></span>
+<img [height]='height'
+     [width]='width'
+     [title]='alpha2 | a2ToCountry'
+     (mouseenter)='_onOver($event)'
+     src='/assets/images/country-outlines/{{ alpha2 }}.png' />
