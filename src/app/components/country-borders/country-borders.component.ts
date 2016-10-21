@@ -37,7 +37,7 @@ export class CountryBordersComponent implements OnInit {
         this._a3CountryBorders = this._countriesData[this.alpha2].geo.borders || [];
         this._barWidth = 250;//this._elementRef.nativeElement.querySelector('.bar').offsetWidth;   
         this._barHeight = 98;//this._elementRef.nativeElement.querySelector('.bar').offsetHeight;
-        console.log(this._barHeight, this._barWidth);
+        // console.log(this._barHeight, this._barWidth);
         // this._elementRef.nativeElement.style.width = `${this._flagWidth}px`;
         // this._elementRef.nativeElement.style.width = `${this._a3CountryBorders.length * this._flagWidth * 1.4}px`;                             
     }
