@@ -1,6 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '../node_modules/flag-icon-css/css/flag-icon.min.css';
-
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
@@ -14,3 +12,29 @@ body {
     color: white;
     font-size: 20px;
 }
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.clearfix { 
+    display: inline-block; 
+}
+
+/* start commented backslash hack \*/
+* html .clearfix { 
+    height: 1%; 
+}
+
+.clearfix { 
+    display: block; 
+}
+
+/* close commented backslash hack */
+
+@import '../node_modules/flag-icon-css/css/flag-icon.min.css';

@@ -10,6 +10,16 @@ header h1 {
 }
 
 .sort-buttons-container {
+.sticky-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    margin-top: -90px;        
+}
+
+.sticky-main {
+    margin-top: 90px;    
+}
     font-size: 16px;
     color: white;
 }
