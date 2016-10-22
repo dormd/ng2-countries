@@ -2,7 +2,9 @@
     position: relative;
     width: 720px;
     height: 360px;
-    background: lightblue;
+    background: url('/assets/images/countries-outlines-map.png');
+    background-position-y: 10px;
+    background-size: cover;
 }
 
 .country-flag-container {

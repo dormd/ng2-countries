@@ -26,7 +26,7 @@ export class WorldFlagsMapComponent {
 
         top -= lat;
 
-        return top * this._mapRelationFactor;
+        return top * this._mapRelationFactor - 6;
     }
 
     private _getCountryLeft(alpha2: string) {
@@ -35,6 +35,6 @@ export class WorldFlagsMapComponent {
         let left = 180;
 
         left += lon;
-        return left * this._mapRelationFactor;        
+        return left * this._mapRelationFactor - 6;        
     }
 }
