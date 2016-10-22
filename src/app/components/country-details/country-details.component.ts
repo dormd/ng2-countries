@@ -1,14 +1,12 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 
-import { ICountry } from '../../modules/shared/models';
-
 @Component({
     selector: 'country-details',
     templateUrl: './country-details.component.html',
     styleUrls: ['./country-details.component.css']
 })
 export class CountryDetailsComponent implements OnInit {
-    @Input() data: ICountry;
+    @Input() data;
     @Input() serialNum = '';
     @Input() isShrinkMode = false;
     @Input() isSerialNumShow = false;
