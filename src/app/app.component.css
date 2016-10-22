@@ -9,7 +9,6 @@ header h1 {
     padding: 15px 0 15px 15px;   
 }
 
-.sort-buttons-container {
 .sticky-header {
     position: fixed;
     width: 100%;
@@ -20,13 +19,25 @@ header h1 {
 .sticky-main {
     margin-top: 90px;    
 }
+
+.mode-buttons-container {
+    float: right;
+}
+
+.mode-buttons-container, .sort-buttons-container {
+    display: inline-block;
     font-size: 16px;
     color: white;
 }
 
-.sort-buttons-container div {
+.sort-buttons-container div, .mode-buttons-container div {
     display: inline-block;
     margin-right: 5px;
+    cursor: pointer;
+}
+
+.active-option {
+    color: black;
 }
 
 .main-content-container {

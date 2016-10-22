@@ -1,31 +1,68 @@
 <header class='sticky-header'>
     <h1>Ng2 Countries | By dormd</h1>
-    <shuffle-button [count]='_shuffleCount' (shuffleClick)='_onShuffleClick()'></shuffle-button>
+    <shuffle-button 
+        *ngIf='_viewMode === _viewModeTypes.Cards'
+        [count]='_shuffleCount' 
+        (shuffleClick)='_onShuffleClick()'>
+    </shuffle-button>
     
-    <div class='sort-buttons-container'>
-        Sort:
-        <div (click)='_onSortByArea()'>
-            <i class="fa fa-globe" aria-hidden="true"></i>
     <section class='main-operations-bar clearfix'>
+
+        <div *ngIf='_viewMode === _viewModeTypes.Cards' 
+             class='sort-buttons-container'>
+
+            Sort:
+            <div (click)='_onSortByArea()'>
+                <i class="fa fa-globe" 
+                   [class.active-option]='_sortByMode === _sortModeTypes.Area'
+                   title='Sort by area'
+                   aria-hidden="true"></i>
+            </div>
+
+            <div (click)='_onSortByPopulation()'>
+                <i class="fa fa-male" 
+                   [class.active-option]='_sortByMode === _sortModeTypes.Population'
+                   title='Sort by population'                   
+                   aria-hidden="true"></i>
+            </div>    
         </div>
 
-        <div (click)='_onSortByPopulation()'>
-            <i class="fa fa-male" aria-hidden="true"></i>
-        </div>    
-    </div>
+        <div class='mode-buttons-container'>
+            Feature:
+            <div (click)='_onCardsModeClick()'>
+                <i class="fa fa-wpforms" 
+                   [class.active-option]='_viewMode === _viewModeTypes.Cards'
+                   title='Show countries cards'
+                   aria-hidden="true">
+                </i>
+            </div>
+
+            <div (click)='_onMapModeClick()'>
+                <i class="fa fa-globe" 
+                   [class.active-option]='_viewMode === _viewModeTypes.FlagsMap'
+                   title='Show Countries flags map'
+                   aria-hidden="true">
+                </i>
+            </div>    
+        </div>
+    </section>
 </header>
 
-    <!--<world-flags-map></world-flags-map>-->
+<main class='main-content-container sticky-main'>    
     
-    <country-details 
-        *ngFor='let a2Country of _countriesKeys; let i = index'
-        [data]='_countriesData[a2Country]'
-        [serialNum]='i + 1'
-        [isShrinkMode]='_isShuffleOn'
-        [isSerialNumShow]='_isSortMode'
-        [isAnthemExist]='_anthemsData.hasOwnProperty(a2Country)'>
-    
-    </country-details>
+    <div *ngIf='_viewMode === _viewModeTypes.Cards'
          shuffle 
          (shuffleCount)='_onShuffleCount($event)'>
+
+        <country-details 
+            *ngFor='let a2Country of _countriesKeys; let i = index'
+            [data]='_countriesData[a2Country]'
+            [serialNum]='i + 1'
+            [isShrinkMode]='_isShuffleOn'
+            [isSerialNumShow]='_sortByMode !== _sortModeTypes.None'
+            [isAnthemExist]='_anthemsData.hasOwnProperty(a2Country)'>
+        </country-details>
+    </div>
+
+    <world-flags-map *ngIf='_viewMode === _viewModeTypes.FlagsMap'></world-flags-map>    
 </main>

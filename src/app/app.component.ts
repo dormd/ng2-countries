@@ -11,6 +11,14 @@ import { ANTHEMS_DATA,
 import { ShuffleDirective }  from './modules/shared/directives';
 import { WikipediaService }  from './services';
 
+export enum ViewModeType {
+    Cards, FlagsMap
+}
+
+export enum SortModeType {
+    None, Area, Population
+}
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -23,7 +31,12 @@ export class AppComponent {
     private _anthems: Object = {};
     private _shuffleCount = 0;
     private _isShuffleOn = false;
-    private _isSortMode = false;
+
+    private _viewMode = ViewModeType.Cards;
+    private _sortByMode = SortModeType.None;
+
+    private _viewModeTypes = ViewModeType;
+    private _sortModeTypes = SortModeType;
 
     constructor(private _wikipediaService: WikipediaService,
                 private _speakerService: SpeakerService,
@@ -33,27 +46,36 @@ export class AppComponent {
         this._countriesKeys = _.keys(this._countriesData);
     }
 
+    private _onCardsModeClick() {
+        this._viewMode = ViewModeType.Cards;
+    }
+
+    private _onMapModeClick() {
+        this._viewMode = ViewModeType.FlagsMap;
+    }
+
     private _onSortByArea() {
         // desc
         this._countriesKeys = _.sortBy(this._countriesKeys, (a2) => -1 * this._countriesData[a2].geo.area);
-        this._isSortMode = true;        
+        this._sortByMode = SortModeType.Area;      
     }
 
     private _onSortByPopulation() {
         // desc
+        this._sortByMode = SortModeType.Population;         
+
         this._countriesKeys = _.sortBy(this._countriesKeys, (a2) => {
             const populationData = this._countriesData[a2].population;
             if (!populationData)
                 return 0;
             return -1 * this._countriesData[a2].population.count;
         });
-        this._isSortMode = true;        
     }
 
     private _onShuffleClick() {        
         this._shuffleDirective.toggle();
         this._isShuffleOn = !this._isShuffleOn;
-        this._isSortMode = false;
+        this._sortByMode = SortModeType.None;
     }
 
     private _onShuffleCount(count) {
