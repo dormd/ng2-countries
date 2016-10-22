@@ -1,5 +1,4 @@
 import { Directive, Output, ElementRef, Renderer, EventEmitter } from '@angular/core';
-import { AnimationStyles, AnimationKeyframe } from '../models';
 import { AnimationsService } from '../services';
 
 @Directive({
