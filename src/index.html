@@ -40,7 +40,7 @@
                     var currentCardColor = card.css('background-color');                  
                     
                     $('html, body').animate({
-                        scrollTop: $(this).offset().top + 'px'
+                        scrollTop: $(this).offset().top - 90 + 'px'
                     }, 1250, function() {
                         card.animate({
                             backgroundColor: '#e2a8a8'
