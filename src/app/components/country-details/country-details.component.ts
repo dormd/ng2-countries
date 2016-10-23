@@ -11,7 +11,6 @@ export class CountryDetailsComponent implements OnInit {
     @Input() isShrinkMode = false;
     @Input() isSerialNumShow = false;
     @Input() isAnthemExist = false;
-    @Input() isShrinkMode = false;
 
     private alpha2: string;
     private _gender = 'Female';
