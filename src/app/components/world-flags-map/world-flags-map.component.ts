@@ -12,32 +12,43 @@ import { COUNTRIES_DATA,
 export class WorldFlagsMapComponent {
     private _countriesKeys: string[];
     private _mapRelationFactor = 3;
-    private _wholeWidth = 360 * this._mapRelationFactor;
-    private _wholeHeight = 180 * this._mapRelationFactor;
+    private _wholeWidth;
+    private _wholeHeight;
 
     constructor(@Inject(COUNTRIES_DATA) private _countriesData: Countries) { }
 
     public ngOnInit() {
         this._countriesKeys = _.keys(this._countriesData);
+        this._updateResolution();
+    }
+
+    private _updateResolution() {
+        this._wholeWidth = 360 * this._mapRelationFactor;
+        this._wholeHeight = 180 * this._mapRelationFactor;
+    }
+
+    private _onBestResolution() {
+        this._mapRelationFactor = 8;
+        this._updateResolution();
     }
 
     private _getCountryTop(alpha2: string) {
-        const imageAlignment = 15 / this._mapRelationFactor;
+        const imageAlignment = 10;
 
         const latStr = this._countriesData[alpha2].geo.latitude_dec;
         const lat = +latStr;
-        let top = 90 - lat - imageAlignment;
+        let top = 90 - lat;
 
-        return top * this._mapRelationFactor;
+        return top * this._mapRelationFactor - imageAlignment;
     }
 
     private _getCountryLeft(alpha2: string) {
-        const imageAlignment = 15 / this._mapRelationFactor;
+        const imageAlignment = 7;
 
         const lonStr = this._countriesData[alpha2].geo.longitude_dec;
         const lon = +lonStr;
-        const left = 180 + lon - imageAlignment;
+        const left = 180 + lon;
 
-        return left * this._mapRelationFactor;
+        return left * this._mapRelationFactor - imageAlignment;
     }
 }
