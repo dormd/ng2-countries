@@ -1,5 +1,8 @@
 # Ng2Countries
+## Demo app
+You can see how fun to use this npm in our [Demo Application](https://dormd.github.io/ng2-countries. 
 
+## Angular-cli
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
 ## Development server
