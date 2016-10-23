@@ -11,7 +11,9 @@ import { COUNTRIES_DATA,
 
 export class WorldFlagsMapComponent {
     private _countriesKeys: string[];
-    private _mapRelationFactor = 2;
+    private _mapRelationFactor = 3;
+    private _wholeWidth = 360 * this._mapRelationFactor;
+    private _wholeHeight = 180 * this._mapRelationFactor;
 
     constructor(@Inject(COUNTRIES_DATA) private _countriesData: Countries) { }
 
@@ -20,21 +22,22 @@ export class WorldFlagsMapComponent {
     }
 
     private _getCountryTop(alpha2: string) {
+        const imageAlignment = 15 / this._mapRelationFactor;
+
         const latStr = this._countriesData[alpha2].geo.latitude_dec;
         const lat = +latStr;
-        let top = 90;
+        let top = 90 - lat - imageAlignment;
 
-        top -= lat;
-
-        return top * this._mapRelationFactor - 6;
+        return top * this._mapRelationFactor;
     }
 
     private _getCountryLeft(alpha2: string) {
+        const imageAlignment = 15 / this._mapRelationFactor;
+
         const lonStr = this._countriesData[alpha2].geo.longitude_dec;
         const lon = +lonStr;
-        let left = 180;
+        const left = 180 + lon - imageAlignment;
 
-        left += lon;
-        return left * this._mapRelationFactor - 6;        
+        return left * this._mapRelationFactor;
     }
 }

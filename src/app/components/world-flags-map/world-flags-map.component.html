@@ -1,4 +1,7 @@
-<div class='world'>
+<div class='world'
+     [style.width.px]='_wholeWidth'
+     [style.height.px]='_wholeHeight'>
+
     <div *ngFor='let a2Country of _countriesKeys'
         [style.top.px]='_getCountryTop(a2Country)'
         [style.left.px]='_getCountryLeft(a2Country)'
