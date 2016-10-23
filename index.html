@@ -6,8 +6,9 @@
             (function(){
                 var redirect = sessionStorage.redirect;
                 delete sessionStorage.redirect;
+                
                 if (redirect && redirect != location.href) {
-                history.replaceState(null, null, redirect);
+                    history.replaceState(null, null, redirect);
                 }
             })();
         </script>
@@ -16,10 +17,10 @@
         <title>Ng2Countries By dormd</title>
         <base href="/ng2-countries/">
 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+        <script type="text/javascript" src="assets/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="assets/jquery.color-2.1.2.min.js"></script>
         
-        <script type="text/javascript" src='https://code.responsivevoice.org/responsivevoice.js'></script>
+        <script type="text/javascript" src='assets/responsivevoice.js'></script>
         <link rel='stylesheet' href='assets/styles/font-awesome.css'>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
