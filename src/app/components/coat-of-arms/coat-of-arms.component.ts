@@ -14,10 +14,17 @@ export class CoatOfArmsComponent {
     @Input() isAnimationAllowed = true;
  
     private _srcPrefix: string;
+    private imgSrc: string;
 
     constructor(private _elementRef: ElementRef,
                 private _renderer: Renderer,
-                private _animationsService: AnimationsService) { }
+                private _animationsService: AnimationsService) { 
+
+                }
+
+    public ngOnInit() {
+        this.imgSrc = 'assets/images/coat-of-arms/' + this.alpha2 + '.png';        
+    }
 
     private _onOver(event) {
         if (this.isAnimationAllowed)
