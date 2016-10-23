@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ng2Countries By dormd</title>
+        <base href="/ng2-countries/">
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+        
+        <script type="text/javascript" src='https://code.responsivevoice.org/responsivevoice.js'></script>
+        <link rel='stylesheet' href='assets/styles/font-awesome.css'>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <app-root>
+            <div class='angular-app-loading'>Loading...</div>
+        </app-root>
+
+        <!-- BAD PRACTICE: NEED TO BE REMOVED -->
+        <script>
+            (function($) {
+                $.fn.goTo = function() {
+                    var card = $(this);
+                    var currentCardColor = card.css('background-color');                  
+                    
+                    $('html, body').animate({
+                        scrollTop: $(this).offset().top + 'px'
+                    }, 1250, function() {
+                        card.animate({
+                            backgroundColor: '#e2a8a8'
+                        }, 800, function() {
+                          card.animate({
+                              backgroundColor: currentCardColor
+                          }, 800);
+                        });
+                    });
+                    return this;
+                }
+            })(jQuery); 
+        </script>
+
+    <script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.26dddcf4c210a3cf2c21.bundle.js"></script><script type="text/javascript" src="main.8b3c15dcedcde22b1e7e.bundle.js"></script></body>
+</html>
