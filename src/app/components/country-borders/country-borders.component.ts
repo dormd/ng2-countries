@@ -101,6 +101,6 @@ export class CountryBordersComponent implements OnInit {
     }
 
     private _onFlagClick(alpha2) {
-        $(`#${ alpha2 }-summary`).goTo();
+        $(`#${ alpha2 }-details`).goTo();
     }
 }
