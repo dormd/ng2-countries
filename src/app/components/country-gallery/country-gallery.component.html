@@ -26,8 +26,8 @@
     
     <app-country-flag   
         [alpha2]='alpha2' 
-        [height]='_littleHeight'
-        [width]='_littleWidth'
+        [height]='_smallHeight'
+        [width]='_smallWidth'
         [isAnimationAllowed]='false'
         (mouseenter)='_onMouseEnterFlag($event)'>
     </app-country-flag>
@@ -35,8 +35,8 @@
     <coat-of-arms 
          *ngIf='!isCoatOfArmsHide'
          [alpha2]='alpha2' 
-         [height]='_littleHeight'
-         [width]='_littleWidth'
+         [height]='_smallHeight'
+         [width]='_smallWidth'
          [isAnimationAllowed]='false'
          (mouseenter)='_onMouseEnterCoatOfArms($event)'>
     </coat-of-arms>
@@ -44,8 +44,8 @@
     <app-country-outline 
          *ngIf='!isOutlinesHide'
          [alpha2]='alpha2' 
-         [height]='_littleHeight'
-         [width]='_littleWidth'
+         [height]='_smallHeight'
+         [width]='_smallWidth'
          [isAnimationAllowed]='false'                  
          (mouseenter)='_onMouseEnterOutline($event)'>
     </app-country-outline>

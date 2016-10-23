@@ -15,11 +15,10 @@ export class CountryGalleryComponent {
 
     private _selectedImage = 0;
 
-    private _littleHeight = 25;
-    private _littleWidth = 25;
-
     private _bigHeight = 63;
     private _bigWidth = 85; 
+    private _smallHeight = 25;
+    private _smallWidth = 25;
 
     public constructor() { }
 
