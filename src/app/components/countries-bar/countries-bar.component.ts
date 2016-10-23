@@ -16,7 +16,6 @@ export class CountriesBarComponent {
     public constructor() { }
 
     private _onFlagClick(alpha2) {
-        console.log('CountriesBarComponent::_onFlagClick', alpha2);
         this.flagClick.emit(alpha2);
     }
 }

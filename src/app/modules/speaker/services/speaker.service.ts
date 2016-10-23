@@ -16,7 +16,6 @@ export class SpeakerService {
 
     public speak(text: string, iso3Language = 'eng', gender = 'Female') {
         const languageGender = this._getLanguageAndGender(iso3Language, gender);
-        console.log(languageGender); 
         
         if (languageGender)
             responsiveVoice.speak(text, languageGender)

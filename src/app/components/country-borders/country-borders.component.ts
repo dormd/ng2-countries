@@ -50,7 +50,6 @@ export class CountryBordersComponent implements OnInit {
     @HostListener('mouseout', ['$event']) 
     private _onMouseOut(event) {
         if (!this._isAnimationTime) {
-            console.log(event);
 
             if (!this._isHostAncestorOf(event.toElement)) {
                 this._isAnimationTime = true;

@@ -42,7 +42,6 @@ export class WikipediaService {
                })
                .map((filePathWithSpaces: string) => {
                    return filePathWithSpaces.split(' ').join('_');
-               })
-               .do(anthemPath => console.log(anthemPath));
+               });
   }
 }

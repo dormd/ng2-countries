@@ -52,8 +52,6 @@ export class ShuffleDirective {
     }
 
     private _shuffleChilds(child1Index: number, child2Index: number): void {
-        console.log(`shuffeling ${child1Index} with ${child2Index}`);
-
         const childs: HTMLCollection = this._getChildrens();
         const child1: Node = childs[child1Index];
         const child2: Node = childs[child2Index];
