@@ -21,7 +21,7 @@ export class CountryOutlineComponent implements OnInit {
                 private _animationsService: AnimationsService) { }
 
     public ngOnInit() {
-        this._imgSrc = `/assets/images/country-outlines/${ this.alpha2 }.png`;
+        this._imgSrc = `assets/images/country-outlines/${ this.alpha2 }.png`;
     }
 
     private _onOver(event) {
