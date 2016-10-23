@@ -14,13 +14,14 @@ export class CountryOutlineComponent implements OnInit {
     @Input() isAnimationAllowed = true;
  
     private _classes: Object;
+    private _imgSrc: string;
 
     constructor(private _elementRef: ElementRef,
                 private _renderer: Renderer,
                 private _animationsService: AnimationsService) { }
 
     public ngOnInit() {
-
+        this._imgSrc = `/assets/images/country-outlines/${ this.alpha2 }.png`;
     }
 
     private _onOver(event) {

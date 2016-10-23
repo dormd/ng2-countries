@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ElementRef, Renderer }   from '@angular/core';
+import { Component, Input, OnInit, Renderer }   from '@angular/core';
 import { AnimationsService } from '../../modules/shared/services';
 
 @Component({
@@ -7,23 +7,20 @@ import { AnimationsService } from '../../modules/shared/services';
     styleUrls: [ './coat-of-arms.component.css' ],    
 })
 
-export class CoatOfArmsComponent {
+export class CoatOfArmsComponent implements OnInit {
     @Input() alpha2: string;
     @Input() height = 30;
     @Input() width = 30;
     @Input() isAnimationAllowed = true;
  
     private _srcPrefix: string;
-    private imgSrc: string;
+    private _imgSrc: string;
 
-    constructor(private _elementRef: ElementRef,
-                private _renderer: Renderer,
-                private _animationsService: AnimationsService) { 
-
-                }
+    constructor(private _renderer: Renderer,
+                private _animationsService: AnimationsService) {}
 
     public ngOnInit() {
-        this.imgSrc = 'assets/images/coat-of-arms/' + this.alpha2 + '.png';        
+        this._imgSrc = `assets/images/coat-of-arms/${ this.alpha2 }.png`;        
     }
 
     private _onOver(event) {

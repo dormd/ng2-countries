@@ -16,6 +16,7 @@ export class CountryFlagComponent implements OnInit {
     @Output() flagClick = new EventEmitter();
  
     private _classes: { [key: string]: boolean };
+    private _alternativeImgSrc: string;
 
     constructor(private _elementRef: ElementRef,
                 private _renderer: Renderer,
@@ -29,6 +30,8 @@ export class CountryFlagComponent implements OnInit {
             [countryIconClass]: true,
             'flag': true
         };
+
+        this._alternativeImgSrc = `assets/images/alternative-flags/${ this.alpha2 }-country-flag.png`;        
     }
 
     private _onOver(event) {

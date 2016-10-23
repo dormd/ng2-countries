@@ -9,7 +9,7 @@
 </span>
 
 <img *ngIf='alpha2 === "XK" || alpha2 === "NC"'
-     src='/src/assets/images/{{ alpha2 }}-country-flag.png'
+     [src]='_alternativeImgSrc'
      [height]='height'
      [width]='width'
      [title]='alpha2 | a2ToCountry'
