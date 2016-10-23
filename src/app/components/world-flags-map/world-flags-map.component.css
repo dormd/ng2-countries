@@ -10,3 +10,7 @@
 .country-flag-container {
     position: absolute;
 }
+
+app-country-flag >>> .flag-icon-il {
+    z-index: 1;
+}
