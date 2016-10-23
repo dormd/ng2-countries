@@ -11,7 +11,8 @@ export class CountryGalleryComponent {
     @Input() alpha2: string[];
     @Input() isOutlinesHide = false;
     @Input() isCoatOfArmsHide = false;
- 
+    @Input() isShrinkMode = false;
+
     private _selectedImage = 0;
 
     private _littleHeight = 25;
@@ -19,9 +20,6 @@ export class CountryGalleryComponent {
 
     private _bigHeight = 63;
     private _bigWidth = 85; 
-
-    private _bigOutlineHeight = 63;
-    private _bigOutlineWidth = 85; 
 
     public constructor() { }
 

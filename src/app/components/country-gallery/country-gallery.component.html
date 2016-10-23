@@ -16,12 +16,14 @@
     <app-country-outline 
          *ngIf='_selectedImage === 2' 
          [alpha2]='alpha2' 
-         [height]='_bigOutlineHeight'
-         [width]='_bigOutlineWidth'>
+         [height]='_bigHeight'
+         [width]='_bigWidth'>
     </app-country-outline>
 </div>
 
-<div class='selectable-images-container'>
+<div *ngIf='!isShrinkMode' 
+     class='selectable-images-container'>
+    
     <app-country-flag   
         [alpha2]='alpha2' 
         [height]='_littleHeight'
