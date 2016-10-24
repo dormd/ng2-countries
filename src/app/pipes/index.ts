@@ -8,3 +8,4 @@ export * from './a2-to-population.pipe';
 export * from './a2-to-wiki-link.pipe';
 export * from './safe.pipe';
 export * from './comma-style.pipe';
+export * from './map-to-array.pipe';

@@ -24,6 +24,7 @@ import { A2ToCountryPipe,
          A2ToWikiLinkPipe,
          CommaStylePipe,
          A3ToA2Pipe,
+         MapToArrayPipe,
          SafePipe, }         from './pipes';
 
 import { WikipediaService }  from './services';
@@ -60,6 +61,7 @@ const pipes = [
     A2ToPopulationPipe,
     A2ToWikiLinkPipe,
     A3ToA2Pipe,
+    MapToArrayPipe,
     CommaStylePipe,
     SafePipe
 ];
