@@ -1,13 +1,16 @@
+:host {
+    display: inline-block;
+}
+
 .shuffle-on {
     color: orangered;
 }
 
 .shuffle-button-container {
-    position: absolute;
-    right: 35px;
-    top: 16px;
-    font-size: 2em;
+    position: relative;
+    font-size: 30px;
     color: white;
+    margin-top: 8px;
     cursor: pointer;
 }
 
@@ -15,7 +18,7 @@
     position: absolute;
     left: 28px;
     top: -11px;
-    font-size: .5em;
+    font-size: 15px;
     padding: 2px;
     border-radius: 6px;
     color: white;

@@ -1,8 +1,8 @@
 .country-details {
     display: inline-table;
     position: relative;
-    width: 250px;
-    height: 265px;
+    width: 270px;
+    height: 305px;
 
     background-color: #e4e4e4;
     padding: 20px;
@@ -50,4 +50,8 @@ app-country-borders {
 
 .country-borders-container {
     margin-bottom: 16px;
+}
+
+.md-card-title {
+    font-size: 22px;
 }
