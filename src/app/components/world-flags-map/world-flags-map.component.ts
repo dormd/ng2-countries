@@ -21,14 +21,24 @@ export class WorldFlagsMapComponent {
         this._updateResolution();
     }
 
-    private _updateResolution() {
-        this._wholeWidth = 360 * this._mapRelationFactor;
-        this._wholeHeight = 180 * this._mapRelationFactor;
-    }
-
     private _onBestResolution() {
         this._mapRelationFactor = 8;
         this._updateResolution();
+    }
+
+    private _onZoomIn() {
+        this._mapRelationFactor++;
+        this._updateResolution();        
+    }
+
+    private _onZoomOut() {
+        this._mapRelationFactor--;
+        this._updateResolution();        
+    }
+
+    private _updateResolution() {
+        this._wholeWidth = 360 * this._mapRelationFactor;
+        this._wholeHeight = 180 * this._mapRelationFactor;
     }
 
     private _getCountryTop(alpha2: string) {
