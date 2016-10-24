@@ -5,6 +5,7 @@ import { HttpModule,
          JsonpModule }      from '@angular/http';
          
 import { MaterialModule }   from '@angular/material';
+import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { ShuffleButtonComponent } from './components';
 import { ShuffleDirective }       from './directives';
@@ -27,7 +28,8 @@ const modules = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    Ng2BootstrapModule
 ];
 
 const providers = [
