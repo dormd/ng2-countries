@@ -13,7 +13,7 @@ import { COUNTRIES_DATA, Countries, ICountry } from '../../modules/shared/models
 })
 
 export class CountriesSearchComponent implements OnInit {
-    @Output() change = new EventEmitter();
+    @Output() search = new EventEmitter();
 
     private _countriesKeys: string[];
     private _filteredResultsKeys: string[];
@@ -44,7 +44,7 @@ export class CountriesSearchComponent implements OnInit {
             return query.test(countryName);
         });
 
-        this._emitChange();
+        this._emitSearchEvent();
 
         return Observable.of(
             this._filteredResultsKeys.map((key: string) => {
@@ -56,7 +56,7 @@ export class CountriesSearchComponent implements OnInit {
     private _onTokenChange(token: string) {
         if (!token || token.trim() === '') {
             this._filteredResultsKeys = this._countriesKeys;
-            this._emitChange();
+            this._emitSearchEvent();
             return;
         }
         
@@ -69,16 +69,16 @@ export class CountriesSearchComponent implements OnInit {
             return;
 
         this._filteredResultsKeys = [ selectedCountry.item.key ];
-        this._emitChange();        
+        this._emitSearchEvent();        
     }
 
     private _onClear() {
         this._token = '';
         this._filteredResultsKeys = this._countriesKeys;
-        this._emitChange();
+        this._emitSearchEvent();
    }
 
-   private _emitChange() {
-       this.change.emit(this._filteredResultsKeys);
+   private _emitSearchEvent() {
+       this.search.emit(this._filteredResultsKeys);
    }
 }
