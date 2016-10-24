@@ -1,51 +1,97 @@
 <header class='sticky-header'>
-    <h1>Ng2 Countries | By dormd</h1>
-    <shuffle-button 
-        *ngIf='_viewMode === _viewModeTypes.Cards'
-        [count]='_shuffleCount' 
-        (shuffleClick)='_onShuffleClick()'>
-    </shuffle-button>
-    
-    <section class='main-operations-bar clearfix'>
+    <div class='header-content'>
+        <section class='first-header-container'>
+            <h1>Ng2 Countries | By dormd</h1>
 
-        <div *ngIf='_viewMode === _viewModeTypes.Cards' 
-             class='sort-buttons-container'>
+            <div class='counters-and-shuffle-container'>
+                <div class='show-counters'>
+                    Show <span>{{ _viewCountriesKeys.length }}</span> 
+                    out of <span>{{ _countriesKeys.length }}</span>
+                </div>
 
-            Sort:
-            <div (click)='_onSortByArea()'>
-                <i class="fa fa-globe" 
-                   [class.active-option]='_sortByMode === _sortModeTypes.Area'
-                   title='Sort by area'
-                   aria-hidden="true"></i>
+                <shuffle-button 
+                    *ngIf='_viewMode === _viewModeTypes.Cards'
+                    [count]='_shuffleCount' 
+                    (shuffleClick)='_onShuffleClick()'>
+                </shuffle-button>
+            </div>
+        </section>
+
+        <section class='main-operations-bar clearfix'>
+            
+            <div class='sort-buttons-container'
+                 *ngIf='_viewMode === _viewModeTypes.Cards'>
+
+                Sort:
+                <div (click)='_onSortByArea()'>
+                    <i class="fa fa-globe" 
+                    [class.active-option]='_sortByMode === _sortModeTypes.Area'
+                    title='Sort by area'
+                    aria-hidden="true"></i>
+                </div>
+
+                <div (click)='_onSortByPopulation()'>
+                    <i class="fa fa-male" 
+                    [class.active-option]='_sortByMode === _sortModeTypes.Population'
+                    title='Sort by population'                   
+                    aria-hidden="true"></i>
+                </div>    
             </div>
 
-            <div (click)='_onSortByPopulation()'>
-                <i class="fa fa-male" 
-                   [class.active-option]='_sortByMode === _sortModeTypes.Population'
-                   title='Sort by population'                   
-                   aria-hidden="true"></i>
-            </div>    
-        </div>
+            <div class='mode-buttons-container'>
+                Feature:
+                <div (click)='_onCardsModeClick()'>
+                    <i class="fa fa-wpforms" 
+                    [class.active-option]='_viewMode === _viewModeTypes.Cards'
+                    title='Show countries cards'
+                    aria-hidden="true">
+                    </i>
+                </div>
 
-        <div class='mode-buttons-container'>
-            Feature:
-            <div (click)='_onCardsModeClick()'>
-                <i class="fa fa-wpforms" 
-                   [class.active-option]='_viewMode === _viewModeTypes.Cards'
-                   title='Show countries cards'
-                   aria-hidden="true">
-                </i>
+                <div (click)='_onMapModeClick()'>
+                    <i class="fa fa-globe" 
+                    [class.active-option]='_viewMode === _viewModeTypes.FlagsMap'
+                    title='Show Countries flags map'
+                    aria-hidden="true">
+                    </i>
+                </div>    
             </div>
 
-            <div (click)='_onMapModeClick()'>
-                <i class="fa fa-globe" 
-                   [class.active-option]='_viewMode === _viewModeTypes.FlagsMap'
-                   title='Show Countries flags map'
-                   aria-hidden="true">
-                </i>
-            </div>    
-        </div>
-    </section>
+            <div class='search-container'
+                 *ngIf='_viewMode === _viewModeTypes.Cards'>
+
+                <template #countrySearchTemplate let-countryKeyVal="item">
+                    <app-country-flag [alpha2]='countryKeyVal.key'></app-country-flag>
+                    <h5>{{ countryKeyVal.value.name.common }}</h5>
+                </template>
+
+                <label for="search-input" class='search-icon'>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <span class="sr-only">Search by Country</span>
+                </label>
+
+                <input id="search-input"
+                    [(ngModel)]="_searchToken"
+                    (ngModelChange)='_onSearchValueChange($event)'
+                    (typeaheadOnSelect)="_onSearchCountrySelect($event)"
+                    [typeahead]="_searchDataSource"
+                    [typeaheadOptionField]="'value.name.common'"
+                    [typeaheadItemTemplate]="countrySearchTemplate"
+                    class="form-control"
+                    placeholder="Search Country">                
+                
+                <a id="search-clear" 
+                href="#" 
+                class="fa fa-times-circle"
+                [class.hide]="_searchToken === ''" 
+                aria-hidden="true"
+                (click)='_onClearClick()'>
+                
+                    <span class="sr-only">Clear search</span>
+                </a>
+            </div>
+        </section>
+    </div>
 </header>
 
 <main class='main-content-container sticky-main'>    
@@ -55,7 +101,7 @@
          (shuffleCount)='_onShuffleCount($event)'>
 
         <country-details 
-            *ngFor='let a2Country of _countriesKeys; let i = index'
+            *ngFor='let a2Country of _viewCountriesKeys; let i = index'
             [data]='_countriesData[a2Country]'
             [serialNum]='i + 1'
             [isShrinkMode]='_isShuffleOn'

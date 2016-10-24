@@ -1,39 +1,69 @@
 header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     background-color: #039BE5;
+    padding-top: 30px;
+    padding-bottom: 10px;         
+}
+
+.header-content {
+    padding: 0 30px;   
 }
 
 header h1 {
     display: inline-block;
     color: white; 
-    padding: 15px 0 15px 15px;   
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px 0;   
+}
+
+.counters-and-shuffle-container {
+    float: right;
+    width: 350px; 
+    margin-top: 13px;   
+}
+
+shuffle-button {
+    float: right;
+}
+
+.show-counters {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.show-counters span {
+    font-weight: bold;
 }
 
 .sticky-header {
     position: fixed;
     width: 100%;
     z-index: 100;
-    margin-top: -90px;        
+    margin-top: -125px;        
 }
 
 .sticky-main {
-    margin-top: 90px;    
-}
-
-.mode-buttons-container {
-    float: right;
+    margin-top: 90px;
 }
 
 .mode-buttons-container, .sort-buttons-container {
+    /*float: right;*/
     display: inline-block;
-    font-size: 16px;
+    font-size: 19px;
     color: white;
+    margin-top: 7px;
 }
 
 .sort-buttons-container div, .mode-buttons-container div {
     display: inline-block;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
     cursor: pointer;
+    margin-left: 5px;
+}
+
+.mode-buttons-container {
+    margin-left: 20px;
 }
 
 .active-option {
@@ -41,5 +71,46 @@ header h1 {
 }
 
 .main-content-container {
-    padding: 15px;
+    padding: 35px 15px 15px 15px;
+}
+
+.search-container {
+    width: 350px;
+    float: right;
+
+    position: relative;
+    font-size: 18px;
+}
+
+.search-container .search-icon {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+    position: absolute;
+    left: 17px;
+    top: 6px;
+}
+
+.search-container input {
+    padding-left: 43px;
+    padding-right: 43px;
+    border-radius: 23px;
+}
+
+.search-container #search-clear {
+    text-decoration: none;
+    position: absolute;
+    right: 18px;
+    top: 9px;
+    color: #b3b3b3;
+}
+
+.search-container h5 {
+    display: inline-block;
+}
+
+typehead-container {
+    overflow: scroll;
 }
