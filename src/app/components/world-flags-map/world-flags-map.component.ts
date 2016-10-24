@@ -1,4 +1,4 @@
-import { Component, Inject }              from '@angular/core';
+import { Component, Inject, Input }              from '@angular/core';
 
 import { COUNTRIES_DATA, 
          Countries }         from '../../modules/shared/models';
@@ -10,7 +10,7 @@ import { COUNTRIES_DATA,
 })
 
 export class WorldFlagsMapComponent {
-    private _countriesKeys: string[];
+    @Input() countriesKeys: string[];
     private _mapRelationFactor = 3;
     private _wholeWidth;
     private _wholeHeight;
@@ -18,7 +18,6 @@ export class WorldFlagsMapComponent {
     constructor(@Inject(COUNTRIES_DATA) private _countriesData: Countries) { }
 
     public ngOnInit() {
-        this._countriesKeys = _.keys(this._countriesData);
         this._updateResolution();
     }
 

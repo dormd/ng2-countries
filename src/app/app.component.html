@@ -57,8 +57,7 @@
                 </div>    
             </div>
 
-            <div class='search-container'
-                 *ngIf='_viewMode === _viewModeTypes.Cards'>
+            <div class='search-container'>
 
                 <template #countrySearchTemplate let-countryKeyVal="item">
                     <app-country-flag [alpha2]='countryKeyVal.key'></app-country-flag>
@@ -110,5 +109,8 @@
         </country-details>
     </div>
 
-    <world-flags-map *ngIf='_viewMode === _viewModeTypes.FlagsMap'></world-flags-map>    
+    <world-flags-map 
+        *ngIf='_viewMode === _viewModeTypes.FlagsMap'
+        [countriesKeys]='_viewCountriesKeys'>
+    </world-flags-map>    
 </main>
