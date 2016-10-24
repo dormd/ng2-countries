@@ -58,36 +58,9 @@
             </div>
 
             <div class='search-container'>
-
-                <template #countrySearchTemplate let-countryKeyVal="item">
-                    <app-country-flag [alpha2]='countryKeyVal.key'></app-country-flag>
-                    <h5>{{ countryKeyVal.value.name.common }}</h5>
-                </template>
-
-                <label for="search-input" class='search-icon'>
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <span class="sr-only">Search by Country</span>
-                </label>
-
-                <input id="search-input"
-                    [(ngModel)]="_searchToken"
-                    (ngModelChange)='_onSearchValueChange($event)'
-                    (typeaheadOnSelect)="_onSearchCountrySelect($event)"
-                    [typeahead]="_searchDataSource"
-                    [typeaheadOptionField]="'value.name.common'"
-                    [typeaheadItemTemplate]="countrySearchTemplate"
-                    class="form-control"
-                    placeholder="Search Country">                
-                
-                <a id="search-clear" 
-                href="#" 
-                class="fa fa-times-circle"
-                [class.hide]="_searchToken === ''" 
-                aria-hidden="true"
-                (click)='_onClearClick()'>
-                
-                    <span class="sr-only">Clear search</span>
-                </a>
+                <countries-search
+                    (change)='_onSearchChange($event)'>
+                </countries-search>
             </div>
         </section>
     </div>

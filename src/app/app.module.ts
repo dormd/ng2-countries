@@ -13,6 +13,7 @@ import { CountryDetailsComponent,
          CountryGalleryComponent,
          CoatOfArmsComponent,
          WorldFlagsMapComponent,
+         CountriesSearchComponent,
          AnthemComponent }   from './components';
 
 import { A2ToCountryPipe,
@@ -46,6 +47,7 @@ const components = [
     CountryGalleryComponent,
     CoatOfArmsComponent,
     WorldFlagsMapComponent,
+    CountriesSearchComponent,
     AnthemComponent,
     AppComponent
 ];

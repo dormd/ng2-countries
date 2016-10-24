@@ -79,38 +79,4 @@ shuffle-button {
     float: right;
 
     position: relative;
-    font-size: 18px;
-}
-
-.search-container .search-icon {
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-
-    position: absolute;
-    left: 17px;
-    top: 6px;
-}
-
-.search-container input {
-    padding-left: 43px;
-    padding-right: 43px;
-    border-radius: 23px;
-}
-
-.search-container #search-clear {
-    text-decoration: none;
-    position: absolute;
-    right: 18px;
-    top: 9px;
-    color: #b3b3b3;
-}
-
-.search-container h5 {
-    display: inline-block;
-}
-
-typehead-container {
-    overflow: scroll;
 }

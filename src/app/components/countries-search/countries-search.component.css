@@ -1,0 +1,36 @@
+:host {
+    font-size: 18px;
+}
+
+.search-icon {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+
+    position: absolute;
+    left: 17px;
+    top: 6px;
+}
+
+input {
+    padding-left: 43px;
+    padding-right: 43px;
+    border-radius: 23px;
+}
+
+#search-clear {
+    text-decoration: none;
+    position: absolute;
+    right: 18px;
+    top: 9px;
+    color: #b3b3b3;
+}
+
+h5 {
+    display: inline-block;
+}
+
+typehead-container {
+    overflow: scroll;
+}

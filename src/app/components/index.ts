@@ -6,4 +6,5 @@ export * from './countries-bar/countries-bar.component';
 export * from './country-gallery/country-gallery.component';
 export * from './coat-of-arms/coat-of-arms.component';
 export * from './world-flags-map/world-flags-map.component';
+export * from './countries-search/countries-search.component';
 export * from './anthem/anthem.component';

@@ -11,10 +11,6 @@ import { ANTHEMS_DATA,
 import { ShuffleDirective }  from './modules/shared/directives';
 import { WikipediaService }  from './services';
 
-
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
-
 export enum ViewModeType {
     Cards, FlagsMap
 }
@@ -46,10 +42,6 @@ export class AppComponent {
     private _viewModeTypes = ViewModeType;
     private _sortModeTypes = SortModeType;
 
-    // search
-    public _searchDataSource: Observable<any>;
-    private _searchToken: string = '';
-
     constructor(private _wikipediaService: WikipediaService,
                 private _speakerService: SpeakerService,
                 @Inject(ANTHEMS_DATA) private _anthemsData: Anthems,
@@ -58,50 +50,10 @@ export class AppComponent {
     public ngOnInit() {
         this._countriesKeys = _.keys(this._countriesData);
         this._viewCountriesKeys = this._countriesKeys;    
-
-        this._searchDataSource = Observable.create((observer: any) => {
-            // Runs on every search
-            observer.next(this._searchToken);
-            
-        }).mergeMap((token: string) => this._getCountriesAsObservable(token));
-    }
- 
-    private _getCountriesAsObservable(token: string): Observable<any> {
-        // g - global search; i - insensitive
-        let query = new RegExp(token, 'ig');
-    
-        this._viewCountriesKeys = this._countriesKeys.filter((key: string): boolean => {
-
-            const countryName = this._countriesData[key].name.common;
-            return query.test(countryName);
-        });
-
-        return Observable.of(
-            this._viewCountriesKeys.map((key: string) => {
-                return { key: key, value: this._countriesData[key] };
-            })
-        );
     }
 
-    private _onSearchValueChange(token: string) {
-        if (!token || token.trim() === '') {
-            this._viewCountriesKeys = this._countriesKeys;
-            return;
-        }
-        
-        this._getCountriesAsObservable(token);
-    }
-
-    private _onSearchCountrySelect(selectedCountry: any) {
-        if (!selectedCountry || !selectedCountry.item || !selectedCountry.item.key)
-            return;
-
-        this._viewCountriesKeys = [ selectedCountry.item.key ];
-    }
-
-    private _onClearClick() {
-        this._searchToken = '';
-        this._viewCountriesKeys = this._countriesKeys;
+    private _onSearchChange(viewCountriesKeys: string[]) {
+        this._viewCountriesKeys = viewCountriesKeys;
     }
 
     private _onCardsModeClick() {
