@@ -2,6 +2,10 @@
   "name": "ng2-countries",
   "version": "0.0.4",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dormd/ng2-countries.git"
+  },
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
