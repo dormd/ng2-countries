@@ -43,10 +43,13 @@ export class ShuffleDirective {
 
         const child1Index = this._getRandomChildIndex();
         const child2Index = this._getRandomChildIndex();
-        this._shuffleChilds(child1Index, child2Index);
 
-        this._count++;
-        this.shuffleCount.emit(this._count);
+        if (child1Index !== null && child2Index !== null) {
+            this._shuffleChilds(child1Index, child2Index);
+
+            this._count++;
+            this.shuffleCount.emit(this._count);
+        }
         
         setTimeout(this._doShufflingFlow, 50);
     }
@@ -59,7 +62,7 @@ export class ShuffleDirective {
         // when the child1 next sibling is child2, child2 will be insert before the new place of child1
         const futureChild2NextSibling: Node = child1.nextSibling === child2 ? child1 : child1.nextSibling;
 
-        this._removeAvailableIndexes(child1Index, child2Index)
+        this._removeAvailableIndexes(child1Index, child2Index);
         
         this._doShuffleAnimation(child1, child2, futureChild2NextSibling, () => {
             this._availableIndexesToShuffle.push(child1Index, child2Index);
@@ -103,6 +106,9 @@ export class ShuffleDirective {
 
     private _getRandomChildIndex(): number {
         const length = this._availableIndexesToShuffle.length;
+        if (length <= 1)
+            return null;
+
         const randNum = Math.floor(Math.random() * length);
 
         return this._availableIndexesToShuffle[randNum];
