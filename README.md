@@ -1,9 +1,9 @@
 # Ng2Countries
 All you want to know about countries.
 
-This project written in [Angular 2](https://angular.io), [Typescript 2](https://www.typescriptlang.org) and use [Angular Material 2](https://material.angular.io) and [ng2-bootstrap](https://valor-software.com/ng2-bootstrap).
+The project written in [Angular 2](https://angular.io), [Typescript 2](https://www.typescriptlang.org) and use [Angular Material 2](https://material.angular.io) and [ng2-bootstrap](https://valor-software.com/ng2-bootstrap).
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli).
+The project was generated with [angular-cli](https://github.com/angular/angular-cli).
 
 ## Demo app
 You can see how fun to use this npm in our [Demo Application](https://dormd.github.io/ng2-countries). 
