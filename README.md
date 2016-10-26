@@ -1,6 +1,6 @@
 # Ng2Countries
-[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
-[![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://badge.fury.io/js/%40angular%2Fcore)
+[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/ng2-countries)
+[![npm version](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://www.npmjs.com/package/ng2-countries)
 All you want to know about countries.
 This project written in [Angular 2](https://angular.io), [Typescript 2](https://www.typescriptlang.org) and use [Angular Material 2](https://material.angular.io) and [ng2-bootstrap](https://valor-software.com/ng2-bootstrap).
 
