@@ -11,7 +11,7 @@ You can see how fun to use this npm in our [Demo Application](https://dormd.gith
 * [Demo app](#demo-app)
 * [List of Features](#list-of-features)
 * [Development server](#development-server)
-* [Build](#build]
+* [Build](#build)
 * [Deploying to Github Pages](#deploying-to-github-pages)
 
 ## List of Features
