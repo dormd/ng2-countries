@@ -54,6 +54,7 @@ export class AppComponent {
 
     private _onSearchChange(viewCountriesKeys: string[]) {
         this._viewCountriesKeys = viewCountriesKeys;
+        this._sortByMode = SortModeType.None
     }
 
     private _onCardsModeClick() {
