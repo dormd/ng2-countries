@@ -1,5 +1,5 @@
 # Ng2Countries
-All you want to know about countries.
+All about countries using angular 2.
 
 The project written in [Angular 2](https://angular.io), [Typescript 2](https://www.typescriptlang.org) and use [Angular Material 2](https://material.angular.io) and [ng2-bootstrap](https://valor-software.com/ng2-bootstrap).
 
