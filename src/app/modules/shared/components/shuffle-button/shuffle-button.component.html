@@ -5,11 +5,11 @@
          [innerHtml]='count'>
     </div>
     
-    <i #icon
-       class="fa fa-random" 
+    <span #icon
+       class="glyphicon glyphicon-random" 
        [class.shuffle-on]='_isShuffleOn'     
        (mouseenter)='_onMouseEnter()' 
        title='Shuffle'
        aria-hidden="true">
-    </i>
+    </span>
 </div>

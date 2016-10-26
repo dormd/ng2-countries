@@ -10,13 +10,14 @@
     position: relative;
     font-size: 30px;
     color: white;
+    margin-right: 5px;
     margin-top: 8px;
     cursor: pointer;
 }
 
 .shuffle-count {
     position: absolute;
-    left: 28px;
+    left: 32px;
     top: -11px;
     font-size: 15px;
     padding: 2px;
