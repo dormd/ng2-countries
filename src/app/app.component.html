@@ -18,42 +18,49 @@
         </section>
 
         <section class='main-operations-bar clearfix'>
-            
+
+            <div class='mode-buttons-container'>
+                Feature:
+                
+
+                <div (click)='_onCardsModeClick()'>
+                    <span class="glyphicon glyphicon-th" 
+                          [class.active-option]='_viewMode === _viewModeTypes.Cards'
+                          title='Show countries cards'
+                          aria-hidden="true">
+                    </span>
+                </div>
+
+                <div (click)='_onMapModeClick()'>
+                    <span 
+                        class="glyphicon glyphicon-globe"
+                        [class.active-option]='_viewMode === _viewModeTypes.FlagsMap'
+                        title='Show Countries flags map'
+                        aria-hidden="true">
+                    </span>
+                </div>    
+            </div>
+
             <div class='sort-buttons-container'
                  *ngIf='_viewMode === _viewModeTypes.Cards'>
 
                 Sort:
                 <div (click)='_onSortByArea()'>
-                    <i class="fa fa-globe" 
-                    [class.active-option]='_sortByMode === _sortModeTypes.Area'
-                    title='Sort by area'
-                    aria-hidden="true"></i>
+                    <span 
+                        class="glyphicon glyphicon-globe" 
+                        [class.active-option]='_sortByMode === _sortModeTypes.Area'
+                        title='Sort by area'
+                        aria-hidden="true">
+                    </span>
                 </div>
 
                 <div (click)='_onSortByPopulation()'>
-                    <i class="fa fa-male" 
-                    [class.active-option]='_sortByMode === _sortModeTypes.Population'
-                    title='Sort by population'                   
-                    aria-hidden="true"></i>
-                </div>    
-            </div>
-
-            <div class='mode-buttons-container'>
-                Feature:
-                <div (click)='_onCardsModeClick()'>
-                    <i class="fa fa-wpforms" 
-                    [class.active-option]='_viewMode === _viewModeTypes.Cards'
-                    title='Show countries cards'
-                    aria-hidden="true">
-                    </i>
-                </div>
-
-                <div (click)='_onMapModeClick()'>
-                    <i class="fa fa-globe" 
-                    [class.active-option]='_viewMode === _viewModeTypes.FlagsMap'
-                    title='Show Countries flags map'
-                    aria-hidden="true">
-                    </i>
+                    <span
+                        class="glyphicon glyphicon-user" 
+                        [class.active-option]='_sortByMode === _sortModeTypes.Population'
+                        title='Sort by population'                   
+                        aria-hidden="true">
+                    </span>
                 </div>    
             </div>
 
