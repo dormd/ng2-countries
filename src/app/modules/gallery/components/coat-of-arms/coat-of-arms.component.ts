@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Renderer }   from '@angular/core';
-import { AnimationsService } from '../../modules/shared/services';
+import { AnimationsService } from '../../../shared/services';
 
 @Component({
     selector: 'coat-of-arms',

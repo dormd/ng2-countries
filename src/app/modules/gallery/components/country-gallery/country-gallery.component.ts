@@ -1,5 +1,5 @@
 import { Component, Input, 
-         Output, EventEmitter }              from '@angular/core';
+         Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'country-gallery',
