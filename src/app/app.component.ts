@@ -1,14 +1,11 @@
 import { Component, Inject, ViewChild } from '@angular/core';
 
-import { SpeakerService }    from './modules/speaker/services';
-
 import { COUNTRIES_DATA, 
          Countries,
          ANTHEMS_DATA,
          Anthems }           from './modules/shared/models';
 
 import { ShuffleDirective }  from './modules/shared/directives';
-import { WikipediaService }  from './services';
 
 export enum ViewModeType {
     Cards, FlagsMap
@@ -41,9 +38,7 @@ export class AppComponent {
     private _viewModeTypes = ViewModeType;
     private _sortModeTypes = SortModeType;
 
-    constructor(private _wikipediaService: WikipediaService,
-                private _speakerService: SpeakerService,
-                @Inject(COUNTRIES_DATA) private _countriesData: Countries,
+    constructor(@Inject(COUNTRIES_DATA) private _countriesData: Countries,
                 @Inject(ANTHEMS_DATA) private _anthemsData: Anthems) {} 
 
     public ngOnInit() {

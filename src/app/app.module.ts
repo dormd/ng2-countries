@@ -1,40 +1,24 @@
 import { NgModule }          from '@angular/core';
-import { MaterialModule }    from '@angular/material';
 
 import { SharedModule,
-         SpeakerModule }     from './modules';
+         SpeakerModule,
+         GalleryModule,
+         SearchModule,
+         CountryCardModule,
+         WorldMapModule }    from './modules';
  
 import { AppComponent }      from './app.component';
-import { CountryDetailsComponent,
-         CountryFlagComponent,
-         CountryOutlineComponent,
-         CountryBordersComponent,
-         CountriesBarComponent,
-         CountryGalleryComponent,
-         CoatOfArmsComponent,
-         WorldFlagsMapComponent,
-         CountriesSearchComponent,
-         AnthemComponent }   from './components';
-
-import { WikipediaService }  from './services';
 
 const modules = [
     SharedModule,
     SpeakerModule,
-    MaterialModule.forRoot()
+    GalleryModule,
+    SearchModule,
+    CountryCardModule,
+    WorldMapModule,
 ];
 
 const components = [
-    CountryDetailsComponent,
-    CountryFlagComponent,
-    CountryOutlineComponent,
-    CountryBordersComponent,
-    CountriesBarComponent,
-    CountryGalleryComponent,
-    CoatOfArmsComponent,
-    WorldFlagsMapComponent,
-    CountriesSearchComponent,
-    AnthemComponent,
     AppComponent
 ];
 
@@ -42,9 +26,7 @@ const directives = [];
 
 const pipes = [];
 
-const providers = [
-    WikipediaService,
-]
+const providers = [];
 
 @NgModule({
     declarations: [

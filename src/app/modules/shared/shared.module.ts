@@ -30,7 +30,8 @@ const modules = [
     JsonpModule,
     CountriesPipesModule,
     GeneralPipesModule,
-    Ng2BootstrapModule
+    Ng2BootstrapModule,
+    MaterialModule
 ];
 
 const providers = [
