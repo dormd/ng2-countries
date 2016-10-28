@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from '../shared/';
+import { SharedModule } from '../shared';
 
 import { SpeakerComponent,
          CountryNativeNameSpeakerComponent }   from './components';
@@ -13,7 +13,7 @@ const components = [
     CountryNativeNameSpeakerComponent
 ];
 
-const exportsParts = [
+const myExports = [
     SpeakerComponent,
     CountryNativeNameSpeakerComponent
 ];
@@ -28,7 +28,7 @@ const providers = [
         SharedModule
     ],
     exports: [ 
-        ...exportsParts
+        ...myExports
     ],
     declarations: [ 
         ...components 
