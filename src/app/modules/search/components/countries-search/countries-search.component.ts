@@ -1,10 +1,8 @@
 import { Component, Output, Inject, OnInit, EventEmitter }   from '@angular/core';
-import * as _ from 'lodash';
-
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-
-import { COUNTRIES_DATA, Countries, ICountry } from '../../modules/shared/models';
+import * as _ from 'lodash';
+import { COUNTRIES_DATA, Countries, ICountry } from '../../../shared/models';
 
 @Component({
     selector: 'countries-search',
