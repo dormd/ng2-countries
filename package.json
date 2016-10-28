@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/dormd/ng2-countries.git"
   },
+  "main": "src/app/index.ts",
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
