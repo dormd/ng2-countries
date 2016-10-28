@@ -1,0 +1,1 @@
+export * from './world-flags-map/world-flags-map.component';
