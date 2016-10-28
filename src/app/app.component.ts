@@ -3,10 +3,9 @@ import { Component, Inject, ViewChild } from '@angular/core';
 import { SpeakerService }    from './modules/speaker/services';
 
 import { COUNTRIES_DATA, 
-         Countries }         from './modules/shared/models';
-
-import { ANTHEMS_DATA,
-         Anthems }           from './models';
+         Countries,
+         ANTHEMS_DATA,
+         Anthems }           from './modules/shared/models';
 
 import { ShuffleDirective }  from './modules/shared/directives';
 import { WikipediaService }  from './services';
@@ -44,8 +43,8 @@ export class AppComponent {
 
     constructor(private _wikipediaService: WikipediaService,
                 private _speakerService: SpeakerService,
-                @Inject(ANTHEMS_DATA) private _anthemsData: Anthems,
-                @Inject(COUNTRIES_DATA) private _countriesData: Countries) {}
+                @Inject(COUNTRIES_DATA) private _countriesData: Countries,
+                @Inject(ANTHEMS_DATA) private _anthemsData: Anthems) {} 
 
     public ngOnInit() {
         this._countriesKeys = _.keys(this._countriesData);

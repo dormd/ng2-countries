@@ -5,6 +5,10 @@ import { HttpModule,
          JsonpModule }      from '@angular/http';
          
 import { MaterialModule }   from '@angular/material';
+
+import { CountriesPipesModule,
+         GeneralPipesModule }      from 'ng2-pipe';
+
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { ShuffleButtonComponent } from './components';
@@ -12,29 +16,27 @@ import { ShuffleDirective }       from './directives';
 
 import { AnimationsService }      from './services';
 
-import { COUNTRIES_DATA,
-         LANGUAGES_DATA }   from './models';
-
 import { CountriesData,
          AnthemsData,
-         LanguagesData }    from '../../../assets/data';
-
-const myExports = [
-    ShuffleButtonComponent,
-    ShuffleDirective
-];
+         LanguagesData,
+         COUNTRIES_DATA,
+         LANGUAGES_DATA,
+         ANTHEMS_DATA }           from './models';
 
 const modules = [
     BrowserModule,
     FormsModule,
     HttpModule,
     JsonpModule,
+    CountriesPipesModule,
+    GeneralPipesModule,
     Ng2BootstrapModule
 ];
 
 const providers = [
     { provide: COUNTRIES_DATA, useValue: CountriesData },
     { provide: LANGUAGES_DATA, useValue: LanguagesData },  
+    { provide: ANTHEMS_DATA, useValue: AnthemsData },
     AnimationsService,  
 ];
 
@@ -46,15 +48,24 @@ const directives = [
     ShuffleDirective
 ];
 
+const pipes = []; 
+
+const myExports = [
+    ShuffleButtonComponent,
+    ShuffleDirective,
+    ...pipes,
+    ...modules,
+];
+
 @NgModule({
     imports: [
         ...modules
     ],
     exports: [
-        ...modules,
         ...myExports
     ],
     declarations: [
+        ...pipes,
         ...components,
         ...directives
     ],
