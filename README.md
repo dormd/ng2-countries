@@ -4,6 +4,7 @@ All about countries using angular 2.
 The project written in [Angular 2](https://angular.io), [Typescript 2](https://www.typescriptlang.org) and use [Angular Material 2](https://material.angular.io) and [ng2-bootstrap](https://valor-software.com/ng2-bootstrap).
 
 The project was generated with [angular-cli](https://github.com/angular/angular-cli).
+
 The project use dataset from [countries-data](https://github.com/dormd/countries-data).
 
 ## Demo app
