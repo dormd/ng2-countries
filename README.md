@@ -1,4 +1,4 @@
-# Ng2Countries
+# Ng2-Countries
 All about countries using angular 2.
 
 The project written in [Angular 2](https://angular.io), [Typescript 2](https://www.typescriptlang.org) and use [Angular Material 2](https://material.angular.io) and [ng2-bootstrap](https://valor-software.com/ng2-bootstrap).
@@ -12,10 +12,16 @@ You can see how fun to use this npm in our [Demo Application](https://dormd.gith
 
 ## Table of Contents
 * [Demo app](#demo-app)
+* [Installation](#installation)
 * [List of Features](#list-of-features)
 * [Development server](#development-server)
 * [Build](#build)
 * [Deploying to Github Pages](#deploying-to-github-pages)
+
+## Installation
+```
+npm install ng2-countries
+```
 
 ## List of Features
 * Cards view
@@ -31,8 +37,6 @@ You can see how fun to use this npm in our [Demo Application](https://dormd.gith
 * Countries gallery
 * Countries outlines
 * Coat of arms
-
-
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
