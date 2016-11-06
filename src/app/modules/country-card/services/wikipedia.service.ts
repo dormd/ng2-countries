@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { Jsonp, URLSearchParams } from '@angular/http';
+import { Http, Headers, Jsonp, URLSearchParams } from '@angular/http';
+import * as _ from 'lodash';
 
 @Injectable()
 export class WikipediaService {

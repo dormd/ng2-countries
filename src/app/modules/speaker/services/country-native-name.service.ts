@@ -1,10 +1,7 @@
-import { Injectable,
-         Inject }            from '@angular/core';
-
-import { COUNTRIES_DATA, 
-         Countries }         from '../../shared/models';
-
-import { SpeakerService }    from './speaker.service';
+import { Injectable, Inject } from '@angular/core';
+import * as _ from 'lodash';
+import { COUNTRIES_DATA, Countries } from '../../shared/models';
+import { SpeakerService } from './speaker.service';
 
 export interface ICountryNativeName {
     name: string,

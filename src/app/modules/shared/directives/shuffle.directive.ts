@@ -1,4 +1,5 @@
 import { Directive, Output, ElementRef, Renderer, EventEmitter } from '@angular/core';
+import * as _ from 'lodash';
 import { AnimationsService } from '../services';
 
 @Directive({
