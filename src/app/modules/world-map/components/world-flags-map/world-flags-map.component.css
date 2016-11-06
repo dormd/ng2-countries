@@ -9,6 +9,6 @@
     position: absolute;
 }
 
-app-country-flag >>> .flag-icon-il {
+country-flag >>> .flag-icon-il {
     z-index: 1;
 }

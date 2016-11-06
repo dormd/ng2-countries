@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ElementRef, Renderer }   from '@angular/core'
 import { AnimationsService } from '../../../shared/services';
 
 @Component({
-    selector: 'app-country-outline',
+    selector: 'country-outline',
     templateUrl: './country-outline.component.html',
     styleUrls: [ './country-outline.component.css' ],    
 })

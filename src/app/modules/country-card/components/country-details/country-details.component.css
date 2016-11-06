@@ -39,11 +39,11 @@
     margin-bottom: 5px;
 }
 
-.flag-container app-country-flag >>> .flag {
+.flag-container country-flag >>> .flag {
     cursor: auto;
 }
 
-app-country-borders {
+country-borders {
     display: block;
     position: absolute;
 }

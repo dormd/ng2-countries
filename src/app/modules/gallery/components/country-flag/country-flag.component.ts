@@ -2,7 +2,7 @@ import { Component, Input, OnInit, Output, EventEmitter, ElementRef, Renderer } 
 import { AnimationsService } from '../../../shared/services';
 
 @Component({
-    selector: 'app-country-flag',
+    selector: 'country-flag',
     templateUrl: './country-flag.component.html',
     styleUrls: [ './country-flag.component.css' ],	
 })

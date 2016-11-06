@@ -10,7 +10,7 @@ import * as _ from 'lodash';
 declare const $;
 
 @Component({
-    selector: 'app-country-borders',
+    selector: 'country-borders',
     templateUrl: './country-borders.component.html',
     styleUrls: [ './country-borders.component.css' ],	
 })

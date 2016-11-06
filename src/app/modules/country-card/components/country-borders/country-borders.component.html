@@ -1,10 +1,10 @@
 <a [hidden]='_isShow || _isAnimationTime' (mouseover)='_show()'>Border Countries</a>
 
 <div class='bar' [hidden]='!_isShow'>
-    <app-countries-bar 
+    <countries-bar 
         [a2Countries]='_a3CountryBorders | a3ToA2' 
         [flagHeight]='_flagHeight'
         [flagWidth]='_flagWidth'
         (flagClick)='_onFlagClick($event)'>
-    </app-countries-bar>
+    </countries-bar>
 </div>

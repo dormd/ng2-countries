@@ -47,10 +47,10 @@
             </p>
 
             <div *ngIf='isAnthemExist' class='country-borders-container'>
-                <app-anthem [alpha2]='alpha2'></app-anthem>
+                <anthem [alpha2]='alpha2'></anthem>
             </div>
             
-            <app-country-borders [alpha2]='alpha2'></app-country-borders>
+            <country-borders [alpha2]='alpha2'></country-borders>
 
             <span *ngIf='_isSortMode' class='serial-number'>#{{ i + 1}}</span>                    
         </md-card-content>

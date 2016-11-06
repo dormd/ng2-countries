@@ -1,10 +1,10 @@
 <div class='selected-image-container'>
-    <app-country-flag   
+    <country-flag   
         *ngIf='_selectedImage === 0'
         [alpha2]='alpha2' 
         [height]='_bigHeight'
         [width]='_bigWidth'>
-    </app-country-flag>
+    </country-flag>
 
     <coat-of-arms 
          *ngIf='_selectedImage === 1' 
@@ -13,24 +13,24 @@
          [width]='_bigWidth'>
     </coat-of-arms>
 
-    <app-country-outline 
+    <country-outline 
          *ngIf='_selectedImage === 2' 
          [alpha2]='alpha2' 
          [height]='_bigHeight'
          [width]='_bigWidth'>
-    </app-country-outline>
+    </country-outline>
 </div>
 
 <div *ngIf='!isShrinkMode' 
      class='selectable-images-container'>
     
-    <app-country-flag   
+    <country-flag   
         [alpha2]='alpha2' 
         [height]='_smallHeight'
         [width]='_smallWidth'
         [isAnimationAllowed]='false'
         (mouseenter)='_onMouseEnterFlag($event)'>
-    </app-country-flag>
+    </country-flag>
 
     <coat-of-arms 
          *ngIf='!isCoatOfArmsHide'
@@ -41,12 +41,12 @@
          (mouseenter)='_onMouseEnterCoatOfArms($event)'>
     </coat-of-arms>
 
-    <app-country-outline 
+    <country-outline 
          *ngIf='!isOutlinesHide'
          [alpha2]='alpha2' 
          [height]='_smallHeight'
          [width]='_smallWidth'
          [isAnimationAllowed]='false'                  
          (mouseenter)='_onMouseEnterOutline($event)'>
-    </app-country-outline>
+    </country-outline>
 </div>

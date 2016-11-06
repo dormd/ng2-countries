@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter }   from '@angular/core';
 
 @Component({
-    selector: 'app-countries-bar',
+    selector: 'countries-bar',
     templateUrl: './countries-bar.component.html',
     styleUrls: [ './countries-bar.component.css' ],	
 })

@@ -1,8 +1,8 @@
-app-country-flag {
+country-flag {
     display: inline-block;
 }
 
-app-country-flag >>> span {
+country-flag >>> span {
     border: 1px solid #c5c5c5;
     border-radius: 22px;
     margin: 5px;
