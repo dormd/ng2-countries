@@ -66,31 +66,6 @@ export class AnimationsService {
         });
     }
 
-    // public shrink(node: Node, renderer: Renderer, width: number, height: number, callback?: Function, fadeStepMilliseconds?: number): void {
-    //     const animations = [
-    //         { height: `${height}px` },
-    //         { height: '0' }
-    //     ];
-
-    //     this._animate(node, renderer, animations, {
-    //         fadeStepMilliseconds,
-    //         callback
-    //     });
-    // }
-
-    // public expand(node: Node, renderer: Renderer, width: number, height: number, callback?: Function, fadeStepMilliseconds?: number): void {
-    //     const animations = [
-    //         { height: '0' },
-    //         { height: `${height}px` }
-    //     ];
-
-    //     this._animate(node, renderer, animations, {
-    //         fadeStepMilliseconds,
-    //         callback
-    //     });
-    // }
-
-
     private _animate(node: Node, renderer: Renderer, animations, options: IAnimateOptions): void {
         const ms = options.durationMilliseconds || this._defaultMilliseconds;
 
