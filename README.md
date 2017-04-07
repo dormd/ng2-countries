@@ -8,7 +8,7 @@ The project was generated with [angular-cli](https://github.com/angular/angular-
 The project use dataset from [countries-data](https://github.com/dormd/countries-data).
 
 ## Demo app
-You can see how fun to use this npm in our [Demo Application](https://dormd.github.io/ng2-countries). 
+You can see how fun it is to use this npm in the [Demo Application](https://dormd.github.io/ng2-countries). 
 
 ## Table of Contents
 * [Demo app](#demo-app)
